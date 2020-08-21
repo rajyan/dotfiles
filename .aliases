@@ -1,7 +1,7 @@
 
 alias ojl='oj l -u rajyan -p $AC_PASS https://atcoder.jp'
 alias ojd='oj d $(pbp | sed "s/\r//")'
-alias ojt='oj t -S --print-memory -c ../x64/Debug/${PWD##*/}.exe'
+alias ojt='oj t --print-memory -c ../x64/Debug/${PWD##*/}.exe'
 alias ojs='oj s $(ls -t | grep .cpp$ | head -1) && rm -rf test'
 alias ojdt='ojd && ojt'
 alias ojts='ojt && ojs'
