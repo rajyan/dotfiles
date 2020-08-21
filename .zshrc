@@ -40,26 +40,26 @@ PS1='Init > '
 zinit wait'!' lucid light-mode for \
     OMZL::git.zsh \
     OMZL::prompt_info_functions.zsh \
-    OMZL::spectrum.zsh \
-    OMZL::theme-and-appearance.zsh \
-    OMZT::af-magic
+    #OMZL::spectrum.zsh \
+    #OMZL::theme-and-appearance.zsh \
+    #OMZT::af-magic
 
 #zinit wait'!' lucid light-mode for \
 #    pick"async.zsh" src"pure.zsh" \
 #        sindresorhus/pure
 
 #zinit wait lucid for \
-#        mafredri/zsh-async \
-#zinit wait svn silent for \
+#        mafredri/zsh-async
+#zinit wait'!' svn silent for \
 #    atload"zstyle ':prezto:module:git:alias' skip 'yes'" \
 #	PZTM::git \
 #    atload"prompt paradox" \
 #	PZTM::prompt
 
-#zinit depth=1 lucid nocd for \
-#    atload'source ~/.p10k.zsh' \
-#    atload'_p9k_precmd' \
-#        romkatv/powerlevel10k
+zinit depth=1 lucid nocd for \
+    atload'source ~/.p10k.zsh' \
+    atload'_p9k_precmd' \
+    romkatv/powerlevel10k
 
 # plugins and snippets
 zinit wait lucid for \
