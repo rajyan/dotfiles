@@ -98,7 +98,7 @@ zinit wait'1' as"program" lucid for \
 zinit wait'1' lucid for \
     atclone'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' \
     atclone'pyenv init - >! zpyenv.zsh' \
-    run-atpull atpull'pyenv init - >! zpyenv.zsh && zcompile zpyenv.zsh' \
+    run-atpull atpull'%atclone' \
     atinit'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' \
     atinit'export PYENV_ROOT="$HOME/.pyenv" PATH="$PYENV_ROOT/bin:$PATH"' \
     atinit'PATH="$HOME/.local/bin:$PATH"' \
