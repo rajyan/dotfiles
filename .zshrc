@@ -33,51 +33,69 @@ zinit wait lucid light-mode for \
     atload'_zsh_autosuggest_start' \
         zsh-users/zsh-autosuggestions \
     blockf atpull'zinit creinstall -q .' \
-        zsh-users/zsh-completions \
+        zsh-users/zsh-completions
 
-# theme
+# themes
+
+## prompt while loading themes
 PS1='Init > '
-zinit wait'!' lucid light-mode for \
-    OMZL::git.zsh \
-    OMZL::prompt_info_functions.zsh \
-    OMZL::spectrum.zsh \
-    OMZL::theme-and-appearance.zsh \
-    #OMZT::af-magic
 
+## oh-my-zsh themes
 #zinit wait'!' lucid light-mode for \
-#    pick"async.zsh" src"pure.zsh" \
-#        sindresorhus/pure
+#    OMZL::git.zsh \
+#    OMZL::prompt_info_functions.zsh \
+#    OMZL::spectrum.zsh \
+#    OMZT::af-magic
 
-#zinit wait lucid for \
+## prezto themes
+#zinit wait lucid light-mode for \
 #        mafredri/zsh-async
-#zinit wait'!' svn silent for \
+#zinit wait'!' svn silent light-mode for \
 #    atload"zstyle ':prezto:module:git:alias' skip 'yes'" \
 #	PZTM::git \
 #    atload"prompt paradox" \
 #	PZTM::prompt
 
-zinit depth=1 lucid nocd for \
+## async git info themes
+#zinit wait'!' lucid light-mode for \
+#    pick"async.zsh" src"pure.zsh" \
+#        sindresorhus/pure
+
+zinit depth=1 lucid nocd light-mode for \
     atload'source ~/.p10k.zsh' \
     atload'_p9k_precmd' \
     romkatv/powerlevel10k
 
 # plugins and snippets
+
+## omz and prezto
 zinit wait lucid for \
     zdharma/history-search-multi-word \
     OMZP::colored-man-pages \
     OMZL::clipboard.zsh \
     OMZL::completion.zsh \
     OMZL::grep.zsh \
-    PZTM::directory \
-    
+    OMZL::theme-and-appearance.zsh \
+    PZTM::directory
+
+## dircolors
 zinit wait lucid for \
     atclone"dircolors -b src/dir_colors >! clrs.zsh" \
     atpull'%atclone' pick"clrs.zsh" nocompile'!' \
     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”' \
         arcticicestudio/nord-dircolors
 
+## direnv
+zinit wait'1' as"program" lucid for \
+    atclone'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' \
+    atclone'PATH="$HOMEBREW_PREFIX/bin:$PATH"' \
+    atclone'make && ./direnv hook zsh >! zhook.zsh' \
+    atpull'%atclone' pick"direnv" src"zhook.zsh" \
+        direnv/direnv
+
 # others
-# lazy brew & pyenv init
+ 
+## lazy brew & pyenv init
 zinit wait'1' lucid for \
     atclone'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' \
     atclone'pyenv init - >! zpyenv.zsh' \
@@ -89,15 +107,7 @@ zinit wait'1' lucid for \
     atload'python ~/Desktop/images/background.py' \
         zdharma/null
 
-# direnv
-zinit wait'1' as"program" lucid for \
-    atclone'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' \
-    atclone'PATH="$HOMEBREW_PREFIX/bin:$PATH"' \
-    atclone'make && ./direnv hook zsh > zhook.zsh' \
-    atpull'%atclone' pick"direnv" src"zhook.zsh" \
-        direnv/direnv
-
-# auto compiling zshrc
+## auto compiling zshrc
 zinit wait'1' lucid is-snippet nocd for \
     atload"([ ! -e ~/.zshrc.zwc ] || [ ~/.zshrc -nt ~/.zshrc.zwc ]) && zcompile ~/.zshrc" \
         /dev/null
@@ -147,4 +157,3 @@ alias pbc='clipcopy'
 alias pbp='clippaste'
 
 [ -f ~/.aliases ] && source ~/.aliases
-
