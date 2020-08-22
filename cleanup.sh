@@ -1,6 +1,7 @@
-for file in list
+#! /bin/bash
+for file in $(cat list)
 do
-    [ ! -f $file ] && sed "/$file/d"
+    [ ! -f $file ] && sed -i "/$file/d" list
 done
 
-rm -f $(ls -a ~ | grep "^\..*\.bak$")
+ls -a $HOME | grep "^\..*\.bak$" | xargs rm -f
