@@ -12,4 +12,5 @@
 - post-commitでBrewfileの更新をammend commit
 - addでsymlink張る
 - editor設定する
-
+- cleanup考える
+- scriptはまとめる
