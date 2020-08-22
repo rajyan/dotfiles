@@ -1,4 +1,3 @@
-
 alias ojl='oj l -u rajyan -p $AC_PASS https://atcoder.jp'
 alias ojd='rm -rf test && oj d $(pbp | sed "s/\r//")'
 alias ojt='oj t --print-memory -c ../x64/Debug/${PWD##*/}.exe'
