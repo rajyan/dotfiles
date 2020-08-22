@@ -40,8 +40,8 @@ PS1='Init > '
 zinit wait'!' lucid light-mode for \
     OMZL::git.zsh \
     OMZL::prompt_info_functions.zsh \
-    #OMZL::spectrum.zsh \
-    #OMZL::theme-and-appearance.zsh \
+    OMZL::spectrum.zsh \
+    OMZL::theme-and-appearance.zsh \
     #OMZT::af-magic
 
 #zinit wait'!' lucid light-mode for \
