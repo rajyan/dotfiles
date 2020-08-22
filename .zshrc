@@ -1,7 +1,7 @@
 # Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -60,10 +60,10 @@ PS1='Init > '
 #    pick"async.zsh" src"pure.zsh" \
 #        sindresorhus/pure
 
-zinit depth=1 lucid nocd light-mode for \
+zinit wait'!' depth=1 lucid nocd light-mode for \
     atload'source ~/.p10k.zsh' \
     atload'_p9k_precmd' \
-    romkatv/powerlevel10k
+        romkatv/powerlevel10k
 
 # plugins and snippets
 
