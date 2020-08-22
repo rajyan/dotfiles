@@ -87,7 +87,6 @@ zinit wait lucid for \
 ## direnv
 zinit wait'1' as"program" lucid for \
     atclone'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' \
-    atclone'PATH="$HOMEBREW_PREFIX/bin:$PATH"' \
     atclone'make && ./direnv hook zsh >! zhook.zsh' \
     atpull'%atclone' pick"direnv" src"zhook.zsh" \
         direnv/direnv
