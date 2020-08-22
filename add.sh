@@ -1,4 +1,4 @@
-for $file in $(git diff --diff-filter=AR | grep "^\..*")
+for file in $(git diff --staged --name-only --diff-filter=AR | grep "^\..*")
 do 
     echo $file >> list
 done
