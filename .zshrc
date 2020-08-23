@@ -40,10 +40,11 @@ zinit wait lucid light-mode for \
 PS1='Init > '
 
 ## oh-my-zsh themes
-#zinit wait'!' lucid light-mode for \
-#    OMZL::git.zsh \
-#    OMZL::prompt_info_functions.zsh \
-#    OMZL::spectrum.zsh \
+zinit wait'!' lucid light-mode for \
+    OMZL::git.zsh \
+    OMZL::prompt_info_functions.zsh \
+    OMZL::spectrum.zsh \
+    OMZL::theme-and-appearance.zsh \
 #    OMZT::af-magic
 
 ## prezto themes
@@ -74,7 +75,6 @@ zinit wait lucid for \
     OMZL::clipboard.zsh \
     OMZL::completion.zsh \
     OMZL::grep.zsh \
-    OMZL::theme-and-appearance.zsh \
     PZTM::directory
 
 ## dircolors
