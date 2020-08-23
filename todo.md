@@ -5,6 +5,5 @@
 - .vimrc, .myclircなどの追加
 - macの方のBrewfile整理して追加
 - .aliasesの管理方法考える
-- スクリプトをディレクトリにまとめる
 - editor設定する
-- scriptはまとめる
+- $DOT_DIRを指定できるようにする
