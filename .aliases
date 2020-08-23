@@ -5,3 +5,11 @@ alias ojtr='oj t --print-memory -c ../x64/Release/${PWD##*/}.exe'
 alias ojs='oj s $(ls -t | grep .cpp$ | head -1)'
 alias ojdt='ojd && ojt'
 alias ojts='ojt && ojs'
+
+function git() {
+  if $(pwd -P | grep -q "^\/mnt\/c\/*"); then
+    git.exe "$@"
+  else
+    /bin/git "$@"
+  fi
+}
