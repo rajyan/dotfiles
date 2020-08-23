@@ -85,20 +85,17 @@ zinit wait lucid for \
         arcticicestudio/nord-dircolors
 
 ## direnv
-zinit wait'1' as"program" lucid for \
-    atclone'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' \
-    atclone'make && ./direnv hook zsh >! zhook.zsh' \
+zinit wait'1' as"program" make'!' lucid for \
+    atclone'./direnv hook zsh >! zhook.zsh' \
     atpull'%atclone' pick"direnv" src"zhook.zsh" \
         direnv/direnv
 
 # others
  
-## lazy brew & pyenv init
+## lazy pyenv init
 zinit wait'1' lucid for \
-    atclone'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' \
     atclone'pyenv init - >! zpyenv.zsh' \
     run-atpull atpull'%atclone' \
-    atinit'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' \
     atinit'export PYENV_ROOT="$HOME/.pyenv" PATH="$PYENV_ROOT/bin:$PATH"' \
     atinit'PATH="$HOME/.local/bin:$PATH"' \
     pick'zpyenv.zsh' nocompile'!' \

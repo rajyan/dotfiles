@@ -1,9 +1,6 @@
 # todo
 
 - README書く
-- linuxとmacOSでbrewの場合分け
-- .zshrcをlinux, macOS対応
-- .zshrcの整理
 - それぞれの環境で自動テストするようにする
 - .vimrc, .myclircなどの追加
 - macの方のBrewfile整理して追加
