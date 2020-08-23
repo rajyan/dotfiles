@@ -6,3 +6,7 @@ if [[ "$(uname)" = "Linux" ]]; then
     export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
     export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
 fi
+
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
