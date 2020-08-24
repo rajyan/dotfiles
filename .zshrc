@@ -99,7 +99,6 @@ zinit wait'1' lucid for \
     atinit'export PYENV_ROOT="$HOME/.pyenv" PATH="$PYENV_ROOT/bin:$PATH"' \
     atinit'PATH="$HOME/.local/bin:$PATH"' \
     pick'zpyenv.zsh' nocompile'!' \
-    atload'python ~/Desktop/images/background.py' \
         zdharma/null
 
 ## auto compiling zshrc
