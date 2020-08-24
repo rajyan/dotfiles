@@ -104,7 +104,7 @@ zinit wait'1' lucid for \
 
 ## auto compiling zshrc
 zinit wait'1' lucid is-snippet nocd for \
-    atload"([ ! -e ~/.zshrc.zwc ] || [ ~/.zshrc -nt ~/.zshrc.zwc ]) && zcompile ~/.zshrc" \
+    atload"([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc" \
         /dev/null
 
 # history
@@ -151,4 +151,4 @@ alias h='history'
 alias pbc='clipcopy'
 alias pbp='clippaste'
 
-[ -f ~/.aliases ] && source ~/.aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
