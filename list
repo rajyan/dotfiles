@@ -1,6 +1,7 @@
 .aliases
 .gdbinit
 .p10k.zsh
+.vimrc
 .zprofile
 .zshenv
 .zshrc
