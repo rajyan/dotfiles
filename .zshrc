@@ -104,6 +104,7 @@ zinit wait'1' lucid for \
 ## auto compiling zshrc
 zinit wait'1' lucid is-snippet nocd for \
     atload"([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc" \
+    pick"$HOME/dotfiles/script/rand_back.zsh" \
         /dev/null
 
 # history
