@@ -1,4 +1,6 @@
 .aliases
+.gdbinit
+.p10k.zsh
 .zprofile
 .zshenv
 .zshrc
