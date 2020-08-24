@@ -1,5 +1,6 @@
 .aliases
 .gdbinit
+.myclirc
 .p10k.zsh
 .vimrc
 .zprofile
