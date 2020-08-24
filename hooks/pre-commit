@@ -2,9 +2,12 @@
 
 for file in $(git diff --staged --name-only --diff-filter=AR | grep "^\..*")
 do
-    grep -xq $file list || (echo "ERROR: add dotfiles to list before commit" >&2 && exit 1)
+    if ! grep -xq $file list; then
+        echo "ERROR: add dotfiles to list before commit" >&2
+	exit 1
+    fi
 done
 
-[ -f Brewfile ] && mv -f Brewfile Brewfile.bak
+[[ -f Brewfile ]] && mv -f Brewfile Brewfile.bak
 brew bundle dump
 diff Brewfile Brewfile.bak && rm -f Brewfile.bak || true

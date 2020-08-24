@@ -2,7 +2,7 @@
 
 for file in $(cat $HOME/dotfiles/list)
 do
-    [ -f $HOME/$file ] && mv -f $HOME/$file $HOME/$file.bak
+    [[ -f $HOME/$file ]] && mv -f $HOME/$file $HOME/$file.bak
     ln -sv $HOME/dotfiles/$file $HOME/$file
 done
 
