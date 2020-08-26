@@ -1,11 +1,12 @@
-#! /bin/bash
+#! /bin/zsh
 
-BACKGROUND_DIR=$HOME/Desktop/images
-BACKUP_FILE=$BACKGROUND_DIR/backup
+IMG_DIR=$HOME/Desktop/images
+NAME_BACKUP=$IMG_DIR/backup
+BACK_IMG=$IMG_DIR/back.png
 
-[[ -f $BACKUP_FILE ]] && mv -f $BACKGROUND_DIR/background $(cat $BACKUP_FILE)
-cnt=$( find ${BACKGROUND_DIR} -type f -regex '.*\..*' | wc -l )
+[[ -f $NAME_BACKUP ]] && mv -f $BACK_IMG $(cat $NAME_BACKUP)
+cnt=$( find $IMG_DIR -type f -regex '.*\..*' | wc -l )
 rand=$(( $RANDOM % $cnt + 1 ))
-back_img=$( find ${BACKGROUND_DIR} -type f -regex '.*\..*' | sed -n ${rand}P )
-echo $back_img >! $BACKUP_FILE
-mv -f $back_img $BACKGROUND_DIR/background
+rand_img=$( find $IMG_DIR -type f -regex '.*\..*' | sed -n ${rand}P )
+echo $rand_img >! $NAME_BACKUP
+mv -f $rand_img $BACK_IMG
