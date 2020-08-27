@@ -134,6 +134,11 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 fi
 bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
 bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+bindkey "${terminfo[kbs]}" backward-delete-char
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
+bindkey "^U" backward-kill-line
+bindkey -M viins 'jj' vi-cmd-mode
 
 # aliases
 alias l='ls'
