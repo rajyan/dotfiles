@@ -7,7 +7,3 @@ do
 	exit 1
     fi
 done
-
-[[ -f Brewfile ]] && mv -f Brewfile Brewfile.bak
-brew bundle dump
-diff Brewfile Brewfile.bak && rm -f Brewfile.bak || true

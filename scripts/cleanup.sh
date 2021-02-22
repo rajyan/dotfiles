@@ -8,4 +8,3 @@ done
 
 # clean up .bak files
 ls -d -1 "$HOME"/.?*.bak 2> /dev/null | xargs rm -f
-rm -f $HOME/dotfiles/Brewfile.bak
