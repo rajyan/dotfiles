@@ -101,10 +101,10 @@ zinit wait'1' lucid for \
     pick'zpyenv.zsh' nocompile'!' \
         zdharma/null
 
-## auto compiling zshrc
+## auto compiling zshrc & run additional setup
 zinit wait'1' lucid is-snippet nocd for \
     atload"([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc" \
-    pick"$HOME/dotfiles/script/rand_back.zsh" \
+    pick"$HOME/dotfiles/scripts/setup.zsh" \
         /dev/null
 
 # history
