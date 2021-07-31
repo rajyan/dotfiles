@@ -5,7 +5,10 @@ if [[ "$(uname)" = "Linux" ]]; then
     export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
     export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
     export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
+else
+    export PATH="/opt/homebrew/bin:$PATH"
 fi
+
 
 export EDITOR='vim'
 export VISUAL='vim'

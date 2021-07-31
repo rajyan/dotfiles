@@ -5,3 +5,5 @@
 - .vimrcのカスタマイズ
 - macの方のBrewfile整理して追加
 - .aliasesの管理方法考える
+- font
+- brew
