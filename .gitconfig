@@ -18,3 +18,5 @@
 	added = green
 	changed = yellow
 	ntracked = red
+[pull]
+	rebase = false
