@@ -20,3 +20,5 @@
 	ntracked = red
 [pull]
 	rebase = false
+[core]
+	autocrlf = input
