@@ -85,9 +85,9 @@ zinit wait lucid for \
         arcticicestudio/nord-dircolors
 
 ## direnv
-zinit wait'1' as'program' make'!' lucid for \
-    atclone'./direnv hook zsh >! zhook.zsh' \
-    atpull'%atclone' pick'direnv' src'zhook.zsh' \
+zinit wait'1' lucid for \
+    atclone'./install.sh && direnv hook zsh >! zhook.zsh' \
+    atpull'%atclone' pick'zhook.zsh' \
         direnv/direnv
 
 # others
