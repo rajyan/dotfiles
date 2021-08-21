@@ -53,12 +53,12 @@ zinit wait'!' lucid light-mode for \
 #zinit wait'!' svn silent light-mode for \
 #    atload"zstyle ':prezto:module:git:alias' skip 'yes'" \
 #	PZTM::git \
-#    atload"prompt paradox" \
+#    atload'prompt paradox' \
 #	PZTM::prompt
 
 ## async git info themes
 #zinit wait'!' lucid light-mode for \
-#    pick"async.zsh" src"pure.zsh" \
+#    pick'async.zsh' src'pure.zsh' \
 #        sindresorhus/pure
 
 zinit wait'!' depth=1 lucid nocd light-mode for \
@@ -79,15 +79,15 @@ zinit wait lucid for \
 
 ## dircolors
 zinit wait lucid for \
-    atclone"dircolors -b src/dir_colors >! clrs.zsh" \
-    atpull'%atclone' pick"clrs.zsh" nocompile'!' \
+    atclone'dircolors -b src/dir_colors >! clrs.zsh' \
+    atpull'%atclone' pick'clrs.zsh' nocompile'!' \
     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”' \
         arcticicestudio/nord-dircolors
 
 ## direnv
-zinit wait'1' as"program" make'!' lucid for \
+zinit wait'1' as'program' make'!' lucid for \
     atclone'./direnv hook zsh >! zhook.zsh' \
-    atpull'%atclone' pick"direnv" src"zhook.zsh" \
+    atpull'%atclone' pick'direnv' src'zhook.zsh' \
         direnv/direnv
 
 # others
@@ -103,7 +103,7 @@ zinit wait'1' lucid for \
 
 ## auto compiling zshrc & run additional setup
 zinit wait'1' lucid is-snippet nocd for \
-    atload"([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc" \
+    atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
     pick"$HOME/dotfiles/scripts/setup.zsh" \
         /dev/null
 
