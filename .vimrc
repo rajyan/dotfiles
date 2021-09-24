@@ -9,8 +9,10 @@ set ruler
 set visualbell
 set noerrorbells
 set showmatch
+set clipboard=unnamedplus
 syntax on
 
+set so=7
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -22,10 +24,8 @@ set hlsearch
 set ignorecase
 set incsearch
 set smartcase
-set wrapscan
 
 set laststatus=2
-
 set wildmenu
 set history=5000
 
