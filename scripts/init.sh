@@ -15,7 +15,5 @@ eval "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/ins
 brew bundle --file "$BASE_DIR"/dotfiles/Brewfile
 
 # install fonts
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts && ./install.sh
-cd .. && rm -rf fonts
+git clone https://github.com/powerline/fonts.git --depth=1 && fonts/install.sh && rm -rf fonts
 
