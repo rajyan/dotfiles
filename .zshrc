@@ -96,8 +96,7 @@ zinit wait'1' lucid for \
 zinit wait'1' lucid for \
     atclone'pyenv init - >! zpyenv.zsh' \
     run-atpull atpull'%atclone' \
-    atinit'export PYENV_ROOT="$HOME/.pyenv" PATH="$PYENV_ROOT/bin:$PATH"' \
-    atinit'PATH="$HOME/.local/bin:$PATH"' \
+    atinit'export PYENV_ROOT="$HOME/.pyenv" && export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:$PATH"' \
     pick'zpyenv.zsh' nocompile'!' \
         zdharma/null
 
