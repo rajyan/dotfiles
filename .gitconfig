@@ -22,3 +22,5 @@
 	rebase = false
 [core]
 	autocrlf = input
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
