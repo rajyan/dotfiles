@@ -17,3 +17,6 @@ brew bundle --file "$BASE_DIR"/dotfiles/Brewfile
 # install fonts
 git clone https://github.com/powerline/fonts.git --depth=1 && fonts/install.sh && rm -rf fonts
 
+# gnome-terminal
+git clone https://github.com/arcticicestudio/nord-gnome-terminal.git && nord-gnome-terminal/src/nord.sh && rm -rf nord-gnome-terminal
+
