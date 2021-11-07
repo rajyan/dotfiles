@@ -84,25 +84,27 @@ zinit wait lucid for \
     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”' \
         arcticicestudio/nord-dircolors
 
-## direnv
-zinit wait'1' lucid for \
-    atclone'./install.sh && direnv hook zsh >! zhook.zsh' \
-    atpull'%atclone' pick'zhook.zsh' \
-        direnv/direnv
-
 # others
+
+## lazy direnv init
+zinit wait'1' lucid for \
+    atclone'./install.sh && direnv hook zsh >! direnv.zsh' \
+    atpull'%atclone' pick'direnv.zsh' \
+        direnv/direnv
  
 ## lazy pyenv init
-zinit wait'1' lucid for \
-    atclone'pyenv init - >! zpyenv.zsh' \
+zinit wait'1' as'command' lucid for \
+    atclone'bin/pyenv init - >! pyenv.zsh' \
     run-atpull atpull'%atclone' \
-    atinit'export PYENV_ROOT="$HOME/.pyenv" && export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:$PATH"' \
-    pick'zpyenv.zsh' nocompile'!' \
-        rajyan/null
+    atinit'export PYENV_ROOT="$HOME/.pyenv"' \
+    atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
+    src'pyenv.zsh' pick'bin/pyenv' nocompile'!' \
+        pyenv/pyenv
 
 ## auto compiling zshrc & run additional setup
 zinit wait'1' lucid is-snippet nocd for \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
+    atinit'export PATH="$HOME/.local/bin:$PATH"' \
     pick"$HOME/dotfiles/scripts/setup.zsh" \
         /dev/null
 
