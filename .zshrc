@@ -25,7 +25,7 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# plugins in light-mode
+# zsh plugins in light-mode
 zinit wait lucid light-mode for \
     atinit'zicompinit; zicdreplay' \
         zdharma-continuum/fast-syntax-highlighting \
@@ -98,7 +98,7 @@ zinit wait'1' lucid for \
     run-atpull atpull'%atclone' \
     atinit'export PYENV_ROOT="$HOME/.pyenv" && export PATH="$PYENV_ROOT/bin:$HOME/.local/bin:$PATH"' \
     pick'zpyenv.zsh' nocompile'!' \
-        zdharma-continuum/null
+        rajyan/null
 
 ## auto compiling zshrc & run additional setup
 zinit wait'1' lucid is-snippet nocd for \
