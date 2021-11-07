@@ -114,6 +114,7 @@ zinit wait'1' as'command' lucid for \
     atclone'src/configure && make -C src' \
     atclone'LATEST=$(bin/pyenv install --list | grep -E "^\s*([0-9]+\.[0-9]+\.[0-9]+)$" | tail -1 | tr -d "[[:space:]]")' \
     atclone'bin/pyenv install -f $LATEST && bin/pyenv global $LATEST' \
+    atclone'"$(bin/pyenv root)"/shims/pip install --upgrade pip' \
     atpull'%atclone' \
     atinit'export PYENV_ROOT="$HOME/.pyenv"' \
     atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
