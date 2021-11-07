@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 DOT_DIR=${DOT_DIR:-$HOME/dotfiles}
 
@@ -8,6 +8,8 @@ do
     [[ -f $HOME/$file ]] && mv -f "$HOME/$file" "$HOME/$file".bak
     ln -sv "$DOT_DIR/$file" "$HOME/$file"
 done < "$DOT_DIR/list"
+
+zsh
 
 # install fonts
 git clone https://github.com/powerline/fonts.git --depth=1 && fonts/install.sh && rm -rf fonts
