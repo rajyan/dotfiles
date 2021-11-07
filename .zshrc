@@ -88,6 +88,8 @@ zinit wait lucid for \
 
 ## git credential manager
 zinit wait'1' as'command' from"gh-r" lucid for \
+    atinit'[[ "$(uname)" == "Linux" ]] && export GCM_CREDENTIAL_STORE=secretservice' \
+    atinit'[[ "$(uname)" == "Darwin" ]] && export GCM_CREDENTIAL_STORE=keychain' \
     microsoft/Git-Credential-Manager-Core
 
 ## homebrew
