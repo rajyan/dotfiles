@@ -95,10 +95,10 @@ zinit wait'1' lucid for \
 ## lazy pyenv init
 zinit wait'1' as'command' lucid for \
     atclone'bin/pyenv init - >! pyenv.zsh' \
-    run-atpull atpull'%atclone' \
+    atpull'%atclone' \
     atinit'export PYENV_ROOT="$HOME/.pyenv"' \
     atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
-    src'pyenv.zsh' pick'bin/pyenv' nocompile'!' \
+    src'pyenv.zsh' pick'bin/pyenv' \
         pyenv/pyenv
 
 ## auto compiling zshrc & run additional setup
