@@ -107,9 +107,10 @@ zinit wait'1' as'command' lucid for \
         Homebrew/install
 
 ## direnv
-zinit wait'1' lucid for \
-    atclone'./install.sh && direnv hook zsh >! direnv.zsh' \
-    atpull'%atclone' pick'direnv.zsh' \
+zinit wait'1' as'command' lucid for \
+    make'!' \
+    atclone'./direnv hook zsh >! direnv.zsh' \
+    atpull'%atclone' src'direnv.zsh' pick'direnv' \
         direnv/direnv
 
 ## pyenv
