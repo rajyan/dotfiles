@@ -23,4 +23,5 @@
 [core]
 	autocrlf = input
 [credential]
-	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+	helper = /home/rajyan/.zinit/plugins/microsoft---Git-Credential-Manager-Core/git-credential-manager-core
+	credentialStore = secretservice

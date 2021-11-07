@@ -86,7 +86,11 @@ zinit wait lucid for \
 
 # others
 
-# homebrew
+## git credential manager
+zinit wait'1' as'command' from"gh-r" lucid for \
+    microsoft/Git-Credential-Manager-Core
+
+## homebrew
 zinit wait'1' as'command' lucid for \
     atclone'./install.sh' \
     atclone'[[ "$(uname)" == "Linux" ]] && HOMEBREW_PREFIX=/home/linuxbrew/.linuxbrew' \
