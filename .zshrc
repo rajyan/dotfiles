@@ -86,13 +86,7 @@ zinit wait lucid for \
 
 # others
 
-## lazy direnv init
-zinit wait'1' lucid for \
-    atclone'./install.sh && direnv hook zsh >! direnv.zsh' \
-    atpull'%atclone' pick'direnv.zsh' \
-        direnv/direnv
- 
-## lazy pyenv init
+## pyenv
 zinit wait'1' as'command' lucid for \
     atclone'bin/pyenv init - >! pyenv.zsh' \
     atpull'%atclone' \
@@ -100,6 +94,19 @@ zinit wait'1' as'command' lucid for \
     atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
     src'pyenv.zsh' pick'bin/pyenv' \
         pyenv/pyenv
+
+# homebrew
+zinit wait'1' lucid for \
+    atclone'./install.sh && brew shellenv >! brew.zsh' \
+    atclone'brew bundle --file "$HOME/dotfiles/Brewfile"' \
+    atpull'%atclone' src'brew.zsh' \
+        Homebrew/install
+
+## direnv
+zinit wait'1' lucid for \
+    atclone'./install.sh && direnv hook zsh >! direnv.zsh' \
+    atpull'%atclone' pick'direnv.zsh' \
+        direnv/direnv
 
 ## auto compiling zshrc & run additional setup
 zinit wait'1' lucid is-snippet nocd for \
