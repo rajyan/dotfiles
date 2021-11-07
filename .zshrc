@@ -89,6 +89,7 @@ zinit wait lucid for \
 ## pyenv
 zinit wait'1' as'command' lucid for \
     atclone'bin/pyenv init - >! pyenv.zsh' \
+    atclone'src/configure && make -C src' \
     atpull'%atclone' \
     atinit'export PYENV_ROOT="$HOME/.pyenv"' \
     atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
