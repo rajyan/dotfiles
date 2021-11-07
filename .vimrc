@@ -9,7 +9,6 @@ set ruler
 set visualbell
 set noerrorbells
 set showmatch
-set clipboard=unnamedplus
 syntax on
 
 set so=7
