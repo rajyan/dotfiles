@@ -86,16 +86,6 @@ zinit wait lucid for \
 
 # others
 
-## pyenv
-zinit wait'1' as'command' lucid for \
-    atclone'bin/pyenv init - >! pyenv.zsh' \
-    atclone'src/configure && make -C src' \
-    atpull'%atclone' \
-    atinit'export PYENV_ROOT="$HOME/.pyenv"' \
-    atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
-    src'pyenv.zsh' pick'bin/pyenv' \
-        pyenv/pyenv
-
 # homebrew
 zinit wait'1' lucid for \
     atclone'./install.sh && brew shellenv >! brew.zsh' \
@@ -108,6 +98,24 @@ zinit wait'1' lucid for \
     atclone'./install.sh && direnv hook zsh >! direnv.zsh' \
     atpull'%atclone' pick'direnv.zsh' \
         direnv/direnv
+
+## pyenv
+zinit wait'1' as'command' lucid for \
+    atclone'bin/pyenv init - >! pyenv.zsh' \
+    atclone'src/configure && make -C src' \
+    atpull'%atclone' \
+    atinit'export PYENV_ROOT="$HOME/.pyenv"' \
+    atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
+    src'pyenv.zsh' pick'bin/pyenv' \
+        pyenv/pyenv
+
+## n
+zinit wait'1' as'command' lucid for \
+    atclone'N_PREFIX="$(pwd)" bin/n lts' \
+    atclone'PATH="$(pwd)/bin:$PATH" npm install -g cdk npm-check-updates' \
+    atpull'%atclone' pick'bin/n' \
+    atinit'export N_PREFIX="$(pwd)"' \
+        tj/n
 
 ## auto compiling zshrc & run additional setup
 zinit wait'1' lucid is-snippet nocd for \
