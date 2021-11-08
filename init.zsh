@@ -1,13 +1,16 @@
 #!/usr/bin/env zsh
 
-DOT_DIR=${DOT_DIR:-$HOME/dotfiles}
+set -eux
+
+DOT_DIR=${DOT_DIR:-$HOME/dotfiles/dots}
 
 # setup dotfiles
-while read -r file
+for filepath in "$DOT_DIR"/.*
 do
-    [[ -f $HOME/$file ]] && mv -f "$HOME/$file" "$HOME/$file".bak
-    ln -sv "$DOT_DIR/$file" "$HOME/$file"
-done < "$DOT_DIR/list"
+    file=${filepath##*/}
+    [[ -f "$HOME/$file" ]] && mv -f "$HOME/$file" "$HOME/$file".bak
+    ln -svf "$filepath" "$HOME/$file"
+done
 
 # run zinit
 zsh

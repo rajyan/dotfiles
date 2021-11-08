@@ -5,4 +5,3 @@ alias ojtr='oj t -e 1e-5 --print-memory -c cmake-build-release/"${PWD##*/}"_"${$
 alias ojs='oj s $(ls -t | grep .cpp$ | head -1)'
 alias ojdt='ojd && ojt'
 alias ojts='ojt && ojs'
-
