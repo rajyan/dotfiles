@@ -138,8 +138,10 @@ zinit wait'1' as'command' lucid for \
 zinit wait'1' lucid is-snippet nocd for \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
     atinit'export PATH="$HOME/.local/bin:$PATH"' \
-    src"$HOME/dotfiles/random_background.zsh" \
         /dev/null
+
+zinit wait'1' lucid is-snippet nocd for \
+    $HOME/dotfiles/random_background.zsh
 
 # history
 HISTFILE=~/.zsh_history
