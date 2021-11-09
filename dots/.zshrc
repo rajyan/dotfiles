@@ -84,7 +84,7 @@ zinit wait lucid for \
     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”' \
         arcticicestudio/nord-dircolors
 
-# others
+# development
 
 ## git credential manager
 zinit wait'1' as'command' from"gh-r" lucid for \
@@ -95,6 +95,19 @@ zinit wait'1' as'command' from"gh-r" lucid for \
     if'[[ "$(uname)" == "Darwin" ]]' bpick'*osx*gz' \
     atinit'export GCM_CREDENTIAL_STORE=keychain' \
     microsoft/Git-Credential-Manager-Core
+
+## pyenv
+zinit wait'1' as'command' lucid for \
+    atclone'bin/pyenv init - >! pyenv.zsh' \
+    atclone'src/configure && make -C src' \
+    atclone'LATEST=$(bin/pyenv install --list | grep -E "^\s*([0-9]+\.[0-9]+\.[0-9]+)$" | tail -1 | tr -d "[[:space:]]")' \
+    atclone'bin/pyenv install -f $LATEST && bin/pyenv global $LATEST' \
+    atclone'"$(bin/pyenv root)"/shims/pip install --upgrade pip' \
+    atpull'%atclone' \
+    atinit'export PYENV_ROOT="$HOME/.pyenv"' \
+    atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
+    src'pyenv.zsh' pick'bin/pyenv' \
+        pyenv/pyenv
 
 ## homebrew
 zinit wait'1' as'command' lucid for \
@@ -113,19 +126,6 @@ zinit wait'1' as'command' lucid for \
     atpull'%atclone' src'direnv.zsh' pick'direnv' \
         direnv/direnv
 
-## pyenv
-zinit wait'1' as'command' lucid for \
-    atclone'bin/pyenv init - >! pyenv.zsh' \
-    atclone'src/configure && make -C src' \
-    atclone'LATEST=$(bin/pyenv install --list | grep -E "^\s*([0-9]+\.[0-9]+\.[0-9]+)$" | tail -1 | tr -d "[[:space:]]")' \
-    atclone'bin/pyenv install -f $LATEST && bin/pyenv global $LATEST' \
-    atclone'"$(bin/pyenv root)"/shims/pip install --upgrade pip' \
-    atpull'%atclone' \
-    atinit'export PYENV_ROOT="$HOME/.pyenv"' \
-    atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
-    src'pyenv.zsh' pick'bin/pyenv' \
-        pyenv/pyenv
-
 ## n
 zinit wait'1' as'command' lucid for \
     atclone'N_PREFIX="$(pwd)" bin/n lts' \
@@ -134,12 +134,15 @@ zinit wait'1' as'command' lucid for \
     atinit'export N_PREFIX="$(pwd)"' \
         tj/n
 
+# others
+
 ## auto compiling zshrc & run additional setup
 zinit wait'1' lucid is-snippet nocd for \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
     atinit'export PATH="$HOME/.local/bin:$PATH"' \
         /dev/null
 
+## random background images in terminal
 zinit wait'1' lucid is-snippet nocd for \
     $HOME/dotfiles/random_background.zsh
 
