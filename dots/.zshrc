@@ -103,6 +103,7 @@ zinit wait'1' as'command' lucid for \
     atclone'LATEST=$(bin/pyenv install --list | grep -E "^\s*([0-9]+\.[0-9]+\.[0-9]+)$" | tail -1 | tr -d "[[:space:]]")' \
     atclone'bin/pyenv install -f $LATEST && bin/pyenv global $LATEST' \
     atclone'"$(bin/pyenv root)"/shims/pip install --upgrade pip' \
+    atclone'"$(bin/pyenv root)"/shims/pip completion -z >! pip.zsh' \
     atpull'%atclone' \
     atinit'export PYENV_ROOT="$HOME/.pyenv"' \
     atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
@@ -128,10 +129,10 @@ zinit wait'1' as'command' lucid for \
 
 ## n
 zinit wait'1' as'command' lucid for \
-    atclone'N_PREFIX="$(pwd)" bin/n lts' \
-    atclone'PATH="$(pwd)/bin:$PATH" npm install -g cdk npm-check-updates' \
-    atpull'%atclone' pick'bin/n' \
-    atinit'export N_PREFIX="$(pwd)"' \
+    atclone'N_PREFIX="$HOME/.n" bin/n lts' \
+    atclone'PATH="$HOME/.n/bin:$PATH" npm install -g cdk npm-check-updates' \
+    atpull'%atclone' pick"$HOME/.n/bin/n" \
+    atinit'export N_PREFIX="$HOME/.n"' \
         tj/n
 
 # others
@@ -143,7 +144,7 @@ zinit wait'1' lucid is-snippet nocd for \
         /dev/null
 
 ## random background images in terminal
-zinit wait'1' lucid is-snippet nocd for \
+zinit wait'2' lucid is-snippet nocd for \
     $HOME/dotfiles/random_background.zsh
 
 # history
