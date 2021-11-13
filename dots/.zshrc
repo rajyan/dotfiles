@@ -117,6 +117,7 @@ zinit wait'1' as'command' lucid for \
     atclone'[[ "$(uname -m)" == "arm64" ]] && HOMEBREW_PREFIX=/opt/homebrew' \
     atclone'"$HOMEBREW_PREFIX/bin/brew" shellenv > brew.zsh' \
     atclone'"$HOMEBREW_PREFIX/bin/brew" bundle --file "$HOME/dotfiles/Brewfile"' \
+    atclone'zinit creinstall "$HOMEBREW_PREFIX/share/zsh/site-functions"' \
     atpull'%atclone' src'brew.zsh' \
         Homebrew/install
 
