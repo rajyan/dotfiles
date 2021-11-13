@@ -68,8 +68,10 @@ zinit wait lucid for \
     OMZL::clipboard.zsh \
     OMZL::completion.zsh \
     OMZL::grep.zsh \
-    PZTM::directory \
-    PZTM::history
+    PZTM::directory
+
+## load history without turbo
+zinit snippet PZTM::history
 
 ## dircolors
 zinit wait lucid for \
