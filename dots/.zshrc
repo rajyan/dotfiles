@@ -101,13 +101,13 @@ zinit wait'1' as'command' lucid for \
     atclone'bin/pyenv init - >! pyenv.zsh' \
     atclone'src/configure && make -C src' \
     atclone'LATEST=$(bin/pyenv install --list | grep -E "^\s*([0-9]+\.[0-9]+\.[0-9]+)$" | tail -1 | tr -d "[[:space:]]")' \
-    atclone'bin/pyenv install -f $LATEST && bin/pyenv global $LATEST' \
+    atclone'bin/pyenv install -s $LATEST && bin/pyenv global $LATEST' \
     atclone'"$(bin/pyenv root)"/shims/pip install --upgrade pip' \
     atclone'"$(bin/pyenv root)"/shims/pip completion -z >! pip.zsh' \
     atpull'%atclone' \
     atinit'export PYENV_ROOT="$HOME/.pyenv"' \
     atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
-    src'pyenv.zsh' pick'bin/pyenv' \
+    multisrc'{pyenv,pip}.zsh' pick'bin/pyenv' \
         pyenv/pyenv
 
 ## homebrew
