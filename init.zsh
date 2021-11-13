@@ -13,16 +13,18 @@ do
 done
 
 # run zinit
-zsh
+#zsh
 
 # install fonts
-## powerline fonts
-git clone https://github.com/powerline/fonts.git --depth=1 && fonts/install.sh && rm -rf fonts
+## download powerline fonts
+git clone https://github.com/powerline/fonts.git --depth=1 && pushd fonts
 
-## source han code jp
-git clone https://github.com/adobe-type-tools/afdko.git
+## download and build source han code jp
 git clone https://github.com/adobe-fonts/source-han-code-jp.git
+git clone https://github.com/adobe-type-tools/afdko.git
 python -m venv afdko_env && source afdko_env/bin/activate && pip3 install afdko
 pushd source-han-code-jp && ./commands.sh && popd
-deactivate && rm -rf afdko* source-han-code-jp
+deactivate && rm -rf afdko* && popd
 
+## install
+fonts/install.sh && rm -rf fonts
