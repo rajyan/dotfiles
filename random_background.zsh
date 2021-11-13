@@ -1,4 +1,6 @@
-#! /bin/zsh
+#!/usr/bin/env zsh
+
+set -eux
 
 IMG_DIR=$HOME/Desktop/images
 BACK_FILE=$IMG_DIR/back.raw
