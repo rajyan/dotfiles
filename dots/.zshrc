@@ -75,7 +75,8 @@ zinit wait lucid for \
     OMZL::clipboard.zsh \
     OMZL::completion.zsh \
     OMZL::grep.zsh \
-    PZTM::directory
+    PZTM::directory \
+    PZTM::history
 
 ## dircolors
 zinit wait lucid for \
@@ -147,17 +148,6 @@ zinit wait'1' lucid is-snippet nocd for \
 ## random background images in terminal
 zinit wait'2' lucid is-snippet nocd for \
     $HOME/dotfiles/random_background.zsh
-
-# history
-HISTFILE=~/.zsh_history
-HISTSIZE=100000
-SAVEHIST=100000
-setopt extended_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups  
-setopt hist_ignore_space
-setopt hist_verify
-setopt share_history
 
 # keybindings
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
