@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-set -eux
+set -eu
 
 IMG_DIR=$HOME/Desktop/images
 BACK_FILE=$IMG_DIR/back.raw
