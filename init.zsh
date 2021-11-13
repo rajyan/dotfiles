@@ -1,11 +1,11 @@
 #!/usr/bin/env zsh
 
-set -eux
+set -ux
 
-DOT_DIR=${DOT_DIR:-$HOME/dotfiles/dots}
+ZDOTDIR=${ZDOTDIR:-$HOME/dotfiles/dots}
 
 # setup dotfiles
-for filepath in "$DOT_DIR"/.*
+for filepath in "$ZDOTDIR"/.*
 do
     file=${filepath##*/}
     [[ -f "$HOME/$file" ]] && mv -f "$HOME/$file" "$HOME/$file".bak
@@ -13,7 +13,7 @@ do
 done
 
 # run zinit
-#zsh
+zsh
 
 # install fonts
 ## download powerline fonts
