@@ -136,11 +136,8 @@ zinit wait'1' as'command' lucid for \
 zinit wait'1' lucid is-snippet nocd for \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
     atinit'export PATH="$HOME/.local/bin:$PATH"' \
+    atinit"$HOME/dotfiles/random_background.zsh" \
         /dev/null
-
-## random background images in terminal
-zinit wait'2' lucid is-snippet nocd for \
-    $HOME/dotfiles/random_background.zsh
 
 # keybindings
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
