@@ -129,7 +129,8 @@ zinit wait'1' as'command' lucid for \
 zinit wait'1' as'command' lucid for \
     atclone'N_PREFIX="$HOME/.n" bin/n lts' \
     atclone'PATH="$HOME/.n/bin:$PATH" npm install -g cdk npm-check-updates' \
-    atpull'%atclone' pick"$HOME/.n/bin/n" \
+    atpull'%atclone' \
+    atinit'export PATH="$HOME/.n/bin:$PATH"' pick"bin/n" \
     atinit'export N_PREFIX="$HOME/.n"' \
         tj/n
 
