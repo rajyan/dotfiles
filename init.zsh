@@ -12,6 +12,9 @@ do
     ln -svf "$filepath" "$HOME/$file"
 done
 
+# init zinit
+zsh -i "$HOME/.zshrc"
+
 # install fonts
 ## download powerline fonts
 git clone https://github.com/powerline/fonts.git --depth=1 && pushd fonts
