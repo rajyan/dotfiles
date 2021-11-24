@@ -2,10 +2,10 @@
 
 set -ux
 
-ZDOTDIR=${ZDOTDIR:-$HOME/dotfiles/dots}
+DOTSDIR=${DOTSDIR:-$HOME/dotfiles/dots}
 
 # setup dotfiles
-for filepath in "$ZDOTDIR"/.*
+for filepath in "$DOTSDIR"/.*
 do
     file=${filepath##*/}
     [[ -f "$HOME/$file" ]] && mv -f "$HOME/$file" "$HOME/$file".bak
@@ -13,7 +13,7 @@ do
 done
 
 # init zinit
-zsh -i "$HOME/.zshrc"
+TERM=xterm-256color zsh -isc "$HOME/.zshrc"
 
 # install fonts
 ## download powerline fonts
