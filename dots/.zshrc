@@ -153,9 +153,15 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
     zle -N zle-line-init
     zle -N zle-line-finish
 fi
-bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
-bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
-bindkey "${terminfo[kbs]}" backward-delete-char
+if [[ -n "${terminfo[kcuu1]}" ]]; then
+    bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+fi
+if [[ -n "${terminfo[kcud1]}" ]]; then
+    bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+fi
+if [[ -n "${terminfo[kbs]}" ]]; then
+    bindkey "${terminfo[kbs]}" backward-delete-char
+fi
 bindkey "^?" backward-delete-char
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
