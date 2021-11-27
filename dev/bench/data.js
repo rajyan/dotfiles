@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1637986938355,
+  "lastUpdate": 1637987657228,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -57,6 +57,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macOS",
             "value": "72.64248554146343",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "56c03400b7ed2a338bfa1aefd117a07e226d917d",
+          "message": "Revert \"update git credential manager\"\n\nThis reverts commit b983be46e33496e2feff723238e3a720de16080a.",
+          "timestamp": "2021-11-27T13:31:14+09:00",
+          "tree_id": "8cd4192fdc5eded6717d1feca67d0427344720b9",
+          "url": "https://github.com/rajyan/dotfiles/commit/56c03400b7ed2a338bfa1aefd117a07e226d917d"
+        },
+        "date": 1637987656415,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time Linux",
+            "value": "54.44604261999999",
             "unit": "millisecond"
           }
         ]
