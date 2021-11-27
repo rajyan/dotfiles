@@ -57,6 +57,6 @@ jobs:
           auto-push: true
           comment-on-alert: true
           fail-on-alert: true
-          alert-threshold: 130%
+          alert-threshold: 150%
           alert-comment-cc-users: '@rajyan'
      
