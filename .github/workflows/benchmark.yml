@@ -11,24 +11,36 @@ permissions:
 
 jobs:
   benchmark:
-    name: Test installation in Ubuntu
-    runs-on: ubuntu-latest
+    
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+      fail-fast: false
+
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-      - name: install zsh
-        run: sudo apt-get update && sudo apt-get install -y zsh
-      - name: init zsh
+      - uses: actions/checkout@v2
+
+      - name: Install zsh for Ubuntu
+        if: matrix.os == 'ubuntu-latest'
+        run: sudo apt-get update && sudo apt-get install zsh
+      - name: Install zsh for macOS
+        if: matrix.os == 'macos-latest'
+        run: brew install zsh
+
+      - name: Initialize zsh
         run: zsh ./init.zsh
         env:
-          DOTSDIR: /home/runner/work/dotfiles/dotfiles/dots
-      - name: benchmark
+          DOTSDIR: ${{ github.workspace }}/dots
+
+      - name: Install hyperfine
+        run: brew install hyperfine
+      - name: Benchmark
         run: | 
-          wget https://github.com/sharkdp/hyperfine/releases/download/v1.12.0/hyperfine_1.12.0_amd64.deb
-          sudo dpkg -i hyperfine_1.12.0_amd64.deb
           hyperfine --show-output --warmup 3 'zsh -i -c exit' -n 'zsh load time' --export-json result.json
           jq '.results[] | .["name"] = .command | .["unit"] = "millisecond" | .["value"] = (.mean * 1000 | tostring) | [{name, unit, value}]' result.json > bench.json
-      - name: store bench
+      - name: Store bench
         uses: benchmark-action/github-action-benchmark@v1.10.0
         with:
           tool: "customSmallerIsBetter"

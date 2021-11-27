@@ -13,7 +13,7 @@ do
 done
 
 # init zinit
-TERM=xterm-256color zsh -isc "$HOME/.zshrc"
+TERM=xterm-256color zsh -isc exit
 
 # install fonts
 ## download powerline fonts
