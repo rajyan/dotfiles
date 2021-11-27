@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-set -ux
+set -ex
 
 DOTSDIR=${DOTSDIR:-$HOME/dotfiles/dots}
 
@@ -15,3 +15,4 @@ done
 # init zinit
 TERM=xterm-256color zsh -isc exit
 
+[[ -z $CI ]] && ./fonts.sh

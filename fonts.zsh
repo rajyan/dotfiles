@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+set -eux
+
 # install fonts
 ## download powerline fonts
 git clone https://github.com/powerline/fonts.git --depth=1 && pushd fonts
@@ -13,4 +15,3 @@ deactivate && rm -rf afdko* && popd
 
 ## install
 fonts/install.sh && rm -rf fonts
-
