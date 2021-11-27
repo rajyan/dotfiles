@@ -15,6 +15,3 @@ done
 # init zinit
 TERM=xterm-256color zsh -isc exit
 
-# install fonts
-zsh ./fonts.zsh
-
