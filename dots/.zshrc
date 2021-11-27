@@ -84,9 +84,13 @@ zinit wait lucid for \
 
 ## git credential manager
 zinit wait'1' as'command' from"gh-r" lucid for \
-    atload'[[ "$(uname)" == "Linux" ]] && export GCM_CREDENTIAL_STORE=secretservice' \
-    atload'[[ "$(uname)" == "Darwin" ]] && export GCM_CREDENTIAL_STORE=keychain' \
-        GitCredentialManager/git-credential-manager
+    if'[[ "$(uname)" == "Linux" ]]' \
+    atinit'export GCM_CREDENTIAL_STORE=secretservice' \
+    GitCredentialManager/git-credential-manager
+zinit wait'1' as'command' from"gh-r" lucid for \
+    if'[[ "$(uname)" == "Darwin" ]]' bpick'*osx*gz' \
+    atinit'export GCM_CREDENTIAL_STORE=keychain' \
+    GitCredentialManager/git-credential-manager
 
 ## pyenv
 zinit wait'1' as'command' lucid for \
