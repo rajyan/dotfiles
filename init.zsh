@@ -15,4 +15,6 @@ done
 # init zinit
 TERM=xterm-256color zsh -isc exit
 
-[[ -z $CI ]] && ./fonts.sh
+if [[ -z $CI ]]; then
+    ./fonts.zsh
+fi

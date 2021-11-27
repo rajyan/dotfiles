@@ -84,8 +84,8 @@ zinit wait lucid for \
 
 ## git credential manager
 zinit wait'1' as'command' from"gh-r" lucid for \
-    atinit'[[ "$(uname)" == "Linux" ]] && export GCM_CREDENTIAL_STORE=secretservice' \
-    atinit'[[ "$(uname)" == "Darwin" ]] && export GCM_CREDENTIAL_STORE=keychain' \
+    atload'[[ "$(uname)" == "Linux" ]] && export GCM_CREDENTIAL_STORE=secretservice' \
+    atload'[[ "$(uname)" == "Darwin" ]] && export GCM_CREDENTIAL_STORE=keychain' \
         GitCredentialManager/git-credential-manager
 
 ## pyenv
@@ -97,8 +97,8 @@ zinit wait'1' as'command' lucid for \
     atclone'"$(bin/pyenv root)"/shims/pip install --upgrade pip' \
     atclone'"$(bin/pyenv root)"/shims/pip completion -z >! pip.zsh' \
     atpull'%atclone' \
-    atinit'export PYENV_ROOT="$HOME/.pyenv"' \
-    atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
+    atload'export PYENV_ROOT="$HOME/.pyenv"' \
+    atload'export PATH="$PYENV_ROOT/shims:$PATH"' \
     multisrc'{pyenv,pip}.zsh' pick'bin/pyenv' \
         pyenv/pyenv
 
@@ -126,9 +126,9 @@ zinit wait'1' as'command' lucid for \
 zinit wait'1' as'command' lucid for \
     atclone'N_PREFIX="$HOME/.n" bin/n lts' \
     atclone'PATH="$HOME/.n/bin:$PATH" npm install -g cdk npm-check-updates' \
-    atpull'%atclone' \
-    atinit'export PATH="$HOME/.n/bin:$PATH"' pick"bin/n" \
-    atinit'export N_PREFIX="$HOME/.n"' \
+    atload'export PATH="$HOME/.n/bin:$PATH"' \
+    atload'export N_PREFIX="$HOME/.n"' \
+    atpull'%atclone' pick"bin/n" \
         tj/n
 
 # others
@@ -136,8 +136,8 @@ zinit wait'1' as'command' lucid for \
 ## auto compiling zshrc & run additional setup
 zinit wait'1' lucid is-snippet nocd for \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
-    atinit'export PATH="$HOME/.local/bin:$PATH"' \
-    atinit"$HOME/dotfiles/rand_back.zsh" \
+    atload'export PATH="$HOME/.local/bin:$PATH"' \
+    atload"$HOME/dotfiles/rand_back.zsh" \
         /dev/null
 
 # keybindings
