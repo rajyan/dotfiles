@@ -46,7 +46,7 @@ jobs:
         run: brew install hyperfine
       - name: Benchmark
         run: | 
-          hyperfine --show-output --warmup 3 'zsh -i -c exit' -n 'zsh load time' --export-json result.json
+          hyperfine --show-output --warmup 3 'zsh -i -c exit' -n "zsh load time $RUNNER_OS" --export-json result.json
           jq '.results[] | .["name"] = .command | .["unit"] = "millisecond" | .["value"] = (.mean * 1000 | tostring) | [{name, unit, value}]' result.json > bench.json
       - name: Store bench
         uses: benchmark-action/github-action-benchmark@v1.10.0
