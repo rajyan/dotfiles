@@ -34,6 +34,14 @@ jobs:
         env:
           DOTSDIR: ${{ github.workspace }}/dots
 
+      - name: Cache development dependencies
+        uses: actions/cache@v2
+        with: 
+          path: |
+            ~/.pyenv
+            ~/.n
+          key: ${{ runner.os }}-cache-${{ hashFiles('~/.pyenv/**', '~/.n/**') }}
+
       - name: Install hyperfine
         run: brew install hyperfine
       - name: Benchmark
