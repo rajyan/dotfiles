@@ -13,7 +13,7 @@ do
 done
 
 # init zinit
-TERM=xterm-256color zsh -isc exit
+TERM=xterm-256color zsh -iscex exit
 
 # install fonts
 if [[ -z $CI ]]; then
