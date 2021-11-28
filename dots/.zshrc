@@ -133,10 +133,13 @@ zinit wait'1' as'command' lucid for \
 # others
 
 ## auto compiling zshrc & run additional setup
-zinit wait'1' lucid is-snippet for \
+zinit wait'1' lucid is-snippet nocd for \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
     atload'export PATH="$HOME/.local/bin:$PATH"' \
-        https://raw.githubusercontent.com/rajyan/dotfiles/master/rand_back.zsh
+        /dev/null
+
+zinit wait'2' lucid is-snippet for \
+    https://raw.githubusercontent.com/rajyan/dotfiles/master/rand_back.zsh
 
 # keybindings
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
