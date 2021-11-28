@@ -1,8 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -95,6 +90,7 @@ zinit wait'1' as'command' from"gh-r" lucid for \
 ## pyenv
 zinit wait'1' as'command' lucid for \
     atclone'bin/pyenv init - >! pyenv.zsh' \
+    atclone'bin/pyenv init --path >> pyenv.zsh' \
     atclone'src/configure && make -C src' \
     atclone'LATEST=$(bin/pyenv install --list | grep -E "^\s*([0-9]+\.[0-9]+\.[0-9]+)$" | tail -1 | tr -d "[[:space:]]")' \
     atclone'bin/pyenv install -s $LATEST && bin/pyenv global $LATEST' \
@@ -102,7 +98,6 @@ zinit wait'1' as'command' lucid for \
     atclone'"$(bin/pyenv root)"/shims/pip completion -z >! pip.zsh' \
     atpull'%atclone' \
     atload'export PYENV_ROOT="$HOME/.pyenv"' \
-    atload'export PATH="$PYENV_ROOT/shims:$PATH"' \
     multisrc'{pyenv,pip}.zsh' pick'bin/pyenv' \
         pyenv/pyenv
 
