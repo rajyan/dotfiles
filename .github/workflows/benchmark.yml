@@ -32,7 +32,6 @@ jobs:
       - name: Set cache path to env
         run: |
           echo "brew-opt=$(brew --prefix)/opt" >> $GITHUB_ENV
-          echo "brew-bin=$(brew --prefix)/bin" >> $GITHUB_ENV
           echo "brew-cellar=$(brew --cellar)" >> $GITHUB_ENV
       - name: Cache development dependencies
         uses: actions/cache@v2
@@ -41,7 +40,6 @@ jobs:
             ~/.pyenv
             ~/.n
             ${{ env.brew-opt }}
-            ${{ env.brew-bin }}
             ${{ env.brew-cellar }}
           key: ${{ runner.os }}-cache
 
