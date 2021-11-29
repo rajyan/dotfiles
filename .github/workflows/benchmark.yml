@@ -40,9 +40,6 @@ jobs:
 
       - name: Initialize zsh
         run: zsh ./init.zsh
-        env:
-          DOTSDIR: ${{ github.workspace }}/dots
-          HOMEBREW_PREFIX: ~/.brew
 
       - name: Install hyperfine
         run: brew install hyperfine

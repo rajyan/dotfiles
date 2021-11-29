@@ -2,7 +2,7 @@
 
 set -ex
 
-DOTSDIR=${DOTSDIR:-$HOME/dotfiles/dots}
+DOTSDIR=${DOTSDIR:-"$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"/dots}
 
 # setup dotfiles
 for filepath in "$DOTSDIR"/.*
