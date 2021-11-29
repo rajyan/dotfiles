@@ -31,15 +31,17 @@ jobs:
       
       - name: Set cache path to env
         run: |
-          echo "brew-path=$(brew --prefix)" >> $GITHUB_ENV
+          echo "brew-opt=$(brew --prefix)/opt" >> $GITHUB_ENV
+          echo "brew-cellar=$(brew --cellar)" >> $GITHUB_ENV
       - name: Cache development dependencies
         uses: actions/cache@v2
         with: 
           path: |
             ~/.pyenv
             ~/.n
-            ${{ env.brew-path }}
-          key: ${{ runner.os }}-dev-cache
+            ${{ env.brew-opt }}
+            ${{ env.brew-cellar }}
+          key: ${{ runner.os }}-cache
 
       - name: Initialize zsh
         run: zsh ./init.zsh
