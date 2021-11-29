@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638183918259,
+  "lastUpdate": 1638185241383,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -1363,6 +1363,33 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macOS",
             "value": "108.13720922296298",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yota.kimura@gree.net",
+            "name": "Yohta Kimura"
+          },
+          "committer": {
+            "email": "yota.kimura@gree.net",
+            "name": "Yohta Kimura"
+          },
+          "distinct": true,
+          "id": "6de3da5738ff8e8dc6f51660bec3ec8529337f11",
+          "message": "Revert \"add brew bin\"\n\nThis reverts commit 6ac68ee62f9e0617125aff6cc10db65bc846af43.",
+          "timestamp": "2021-11-29T20:23:35+09:00",
+          "tree_id": "08402e3e1d764440979c22e498477298b029e7d9",
+          "url": "https://github.com/rajyan/dotfiles/commit/6de3da5738ff8e8dc6f51660bec3ec8529337f11"
+        },
+        "date": 1638185240370,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time Linux",
+            "value": "50.12183489636362",
             "unit": "millisecond"
           }
         ]
