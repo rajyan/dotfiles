@@ -28,14 +28,16 @@ jobs:
       - name: Install zsh for macOS
         if: matrix.os == 'macos-latest'
         run: brew install zsh
-
+      
+      - name: Set cache path to env
+        run: echo "brew-cache=$(brew --cache)" >> $GITHUB_ENV
       - name: Cache development dependencies
         uses: actions/cache@v2
         with: 
           path: |
             ~/.pyenv
             ~/.n
-            ${{ runner.os == 'ubuntu-latest' ? '/home/linuxbrew/.linuxbrew' : '/usr/local/Homebrew' }}
+            ${{ env.brew-cache }}
           key: ${{ runner.os }}-dev-cache
 
       - name: Initialize zsh
