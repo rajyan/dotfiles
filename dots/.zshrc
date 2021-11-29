@@ -108,7 +108,7 @@ zinit wait'1' as'command' lucid for \
     atclone'[[ "$(uname)" == "Darwin" ]] && [[ "$(uname -m)" != "arm64" ]] && HOMEBREW_PREFIX=/usr/local' \
     atclone'[[ "$(uname)" == "Darwin" ]] && [[ "$(uname -m)" == "arm64" ]] && HOMEBREW_PREFIX=/opt/homebrew' \
     atclone'"$HOMEBREW_PREFIX/bin/brew" shellenv > brew.zsh' \
-    atclone'"$HOMEBREW_PREFIX/bin/brew" bundle --file "$HOME/dotfiles/Brewfile"' \
+    atclone'"$HOMEBREW_PREFIX/bin/brew" bundle --global' \
     atclone'zinit creinstall "$HOMEBREW_PREFIX/share/zsh/site-functions"' \
     atload'complete -C aws_completer aws' \
     atpull'%atclone' src'brew.zsh' \
@@ -133,11 +133,10 @@ zinit wait'1' as'command' lucid for \
 # others
 
 ## auto compiling zshrc & run additional setup
-zinit wait'1' lucid is-snippet nocd for \
+zinit wait'1' lucid nocd for \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
     atload'export PATH="$HOME/.local/bin:$PATH"' \
-    atload"$HOME/dotfiles/rand_back.zsh" \
-        /dev/null
+        https://raw.githubusercontent.com/rajyan/dotfiles/master/backimg.zsh
 
 # keybindings
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
