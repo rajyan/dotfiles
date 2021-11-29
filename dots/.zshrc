@@ -183,4 +183,6 @@ alias h='history'
 alias pbc='clipcopy'
 alias pbp='clippaste'
 
-[[ -f ~/.aliases ]] && source ~/.aliases
+if [[ -f ~/.aliases ]]; then
+  source ~/.aliases
+fi
