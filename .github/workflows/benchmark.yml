@@ -35,13 +35,14 @@ jobs:
           path: |
             ~/.pyenv
             ~/.n
-            $HOMEBREW_PREFIX
-          key: ${{ runner.os }}-cache
+            ${{ runner.os == 'ubuntu-latest' ? '/home/linuxbrew/.linuxbrew' : '/usr/local/Homebrew' }}
+          key: ${{ runner.os }}-dev-cache
 
       - name: Initialize zsh
         run: zsh ./init.zsh
         env:
           DOTSDIR: ${{ github.workspace }}/dots
+          HOMEBREW_PREFIX: ~/.brew
 
       - name: Install hyperfine
         run: brew install hyperfine
