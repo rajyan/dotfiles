@@ -35,7 +35,8 @@ jobs:
           path: |
             ~/.pyenv
             ~/.n
-          key: ${{ runner.os }}-cache-${{ hashFiles('~/.pyenv/**', '~/.n/**') }}
+            $HOMEBREW_PREFIX
+          key: ${{ runner.os }}-cache
 
       - name: Initialize zsh
         run: zsh ./init.zsh
