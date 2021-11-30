@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638235304729,
+  "lastUpdate": 1638235335132,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -1666,6 +1666,33 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time Linux",
             "value": "49.631583435254235",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yota.kimura@gree.net",
+            "name": "Yohta Kimura"
+          },
+          "committer": {
+            "email": "yota.kimura@gree.net",
+            "name": "Yohta Kimura"
+          },
+          "distinct": true,
+          "id": "39a5143b7dbbe7c3978f19a48b8349e81781ed53",
+          "message": "Revert \"shebang\"\n\nThis reverts commit 61fd21c25e80e44837d87e21ab682dd5a860caf2.",
+          "timestamp": "2021-11-30T10:18:53+09:00",
+          "tree_id": "6a9d3929e03ddb2985f69cfb3534452f8e352c07",
+          "url": "https://github.com/rajyan/dotfiles/commit/39a5143b7dbbe7c3978f19a48b8349e81781ed53"
+        },
+        "date": 1638235334618,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time Linux",
+            "value": "44.00327033522388",
             "unit": "millisecond"
           }
         ]
