@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1638402797658,
+  "lastUpdate": 1638403094801,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -1749,6 +1749,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time Linux",
             "value": "60.97881019083334",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "rajyan",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4913aa4aee11c3b49e3707391f431d4d80158e7e",
+          "message": "now dotfiles repo can be cloned anywhere",
+          "timestamp": "2021-12-02T08:48:20+09:00",
+          "tree_id": "58040b176b2229f6fcbe070464b773af3ff88b5f",
+          "url": "https://github.com/rajyan/dotfiles/commit/4913aa4aee11c3b49e3707391f431d4d80158e7e"
+        },
+        "date": 1638403093449,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macOS",
+            "value": "79.16515440750005",
             "unit": "millisecond"
           }
         ]
