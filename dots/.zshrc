@@ -1,8 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
     print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -84,21 +79,25 @@ zinit wait lucid for \
 
 ## git credential manager
 zinit wait'1' as'command' from"gh-r" lucid for \
-    atinit'[[ "$(uname)" == "Linux" ]] && export GCM_CREDENTIAL_STORE=secretservice' \
-    atinit'[[ "$(uname)" == "Darwin" ]] && export GCM_CREDENTIAL_STORE=keychain' \
-        GitCredentialManager/git-credential-manager
+    if'[[ "$(uname)" == "Linux" ]]' \
+    atinit'export GCM_CREDENTIAL_STORE=secretservice' \
+    GitCredentialManager/git-credential-manager
+zinit wait'1' as'command' from"gh-r" lucid for \
+    if'[[ "$(uname)" == "Darwin" ]]' bpick'*osx*gz' \
+    atinit'export GCM_CREDENTIAL_STORE=keychain' \
+    GitCredentialManager/git-credential-manager
 
 ## pyenv
 zinit wait'1' as'command' lucid for \
     atclone'bin/pyenv init - >! pyenv.zsh' \
+    atclone'bin/pyenv init --path >> pyenv.zsh' \
     atclone'src/configure && make -C src' \
     atclone'LATEST=$(bin/pyenv install --list | grep -E "^\s*([0-9]+\.[0-9]+\.[0-9]+)$" | tail -1 | tr -d "[[:space:]]")' \
     atclone'bin/pyenv install -s $LATEST && bin/pyenv global $LATEST' \
     atclone'"$(bin/pyenv root)"/shims/pip install --upgrade pip' \
     atclone'"$(bin/pyenv root)"/shims/pip completion -z >! pip.zsh' \
     atpull'%atclone' \
-    atinit'export PYENV_ROOT="$HOME/.pyenv"' \
-    atinit'export PATH="$PYENV_ROOT/shims:$PATH"' \
+    atload'export PYENV_ROOT="$HOME/.pyenv"' \
     multisrc'{pyenv,pip}.zsh' pick'bin/pyenv' \
         pyenv/pyenv
 
@@ -109,7 +108,7 @@ zinit wait'1' as'command' lucid for \
     atclone'[[ "$(uname)" == "Darwin" ]] && [[ "$(uname -m)" != "arm64" ]] && HOMEBREW_PREFIX=/usr/local' \
     atclone'[[ "$(uname)" == "Darwin" ]] && [[ "$(uname -m)" == "arm64" ]] && HOMEBREW_PREFIX=/opt/homebrew' \
     atclone'"$HOMEBREW_PREFIX/bin/brew" shellenv > brew.zsh' \
-    atclone'"$HOMEBREW_PREFIX/bin/brew" bundle --file "$HOME/dotfiles/Brewfile"' \
+    atclone'"$HOMEBREW_PREFIX/bin/brew" bundle --global' \
     atclone'zinit creinstall "$HOMEBREW_PREFIX/share/zsh/site-functions"' \
     atload'complete -C aws_completer aws' \
     atpull'%atclone' src'brew.zsh' \
@@ -126,19 +125,18 @@ zinit wait'1' as'command' lucid for \
 zinit wait'1' as'command' lucid for \
     atclone'N_PREFIX="$HOME/.n" bin/n lts' \
     atclone'PATH="$HOME/.n/bin:$PATH" npm install -g cdk npm-check-updates' \
-    atpull'%atclone' \
-    atinit'export PATH="$HOME/.n/bin:$PATH"' pick"bin/n" \
-    atinit'export N_PREFIX="$HOME/.n"' \
+    atload'export PATH="$HOME/.n/bin:$PATH"' \
+    atload'export N_PREFIX="$HOME/.n"' \
+    atpull'%atclone' pick"bin/n" \
         tj/n
 
 # others
 
 ## auto compiling zshrc & run additional setup
-zinit wait'1' lucid is-snippet nocd for \
+zinit wait'1' lucid nocd for \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
-    atinit'export PATH="$HOME/.local/bin:$PATH"' \
-    atinit"$HOME/dotfiles/rand_back.zsh" \
-        /dev/null
+    atload'export PATH="$HOME/.local/bin:$PATH"' \
+        https://raw.githubusercontent.com/rajyan/dotfiles/master/backimg.zsh
 
 # keybindings
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
@@ -185,4 +183,6 @@ alias h='history'
 alias pbc='clipcopy'
 alias pbp='clippaste'
 
-[[ -f ~/.aliases ]] && source ~/.aliases
+if [[ -f ~/.aliases ]]; then
+  source ~/.aliases
+fi

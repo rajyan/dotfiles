@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
-set -ux
+set -ex
 
-DOTSDIR=${DOTSDIR:-$HOME/dotfiles/dots}
+DOTSDIR=${DOTSDIR:-"$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"/dots}
 
 # setup dotfiles
 for filepath in "$DOTSDIR"/.*
@@ -13,5 +13,9 @@ do
 done
 
 # init zinit
-TERM=xterm-256color zsh -isc exit
+TERM=xterm-256color zsh -isce exit
 
+# install fonts
+if [[ -z $CI ]]; then
+    zsh ./fonts.zsh
+fi
