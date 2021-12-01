@@ -9,9 +9,8 @@ Zsh load time for each OS is tracked [here](https://rajyan.github.io/dotfiles/de
 ## Installation
 
 ```bash
-cd $HOME
 git clone https://github.com/rajyan/dotfiles
-cd dotfiles && ./init.zsh
+dotfiles/init.zsh
 ```
 
 This script creates symlinks to dotfiles in home directory, and saves a file with the same name as a backup file if they already exist. 
