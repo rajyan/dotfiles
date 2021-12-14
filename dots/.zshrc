@@ -115,10 +115,9 @@ zinit wait'1' as'command' lucid for \
         Homebrew/install
 
 ## direnv
-zinit wait'1' as'command' lucid for \
-    make'!' \
-    atclone'./direnv hook zsh >! direnv.zsh' \
-    atpull'%atclone' src'direnv.zsh' pick'direnv' \
+zinit wait'1' as'command' from"gh-r" lucid for \
+    atclone'direnv hook zsh >! direnv.zsh' \
+    atpull'%atclone' src'direnv.zsh' \
         direnv/direnv
 
 ## n
