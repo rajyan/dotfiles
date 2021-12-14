@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1639478988928,
+  "lastUpdate": 1639478996351,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -1865,6 +1865,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time Linux",
             "value": "48.27200399714286",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yota.kimura@gree.net",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "182b16edc1e3eedc373c5252ba5ad54cd01ff699",
+          "message": "fix to use gh-r, can use intaller after https://github.com/direnv/direnv/pull/849 is merged",
+          "timestamp": "2021-12-14T19:35:22+09:00",
+          "tree_id": "207784af65b9bf1248355de00a16d527afcdf143",
+          "url": "https://github.com/rajyan/dotfiles/commit/182b16edc1e3eedc373c5252ba5ad54cd01ff699"
+        },
+        "date": 1639478995126,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macOS",
+            "value": "87.46669718000001",
             "unit": "millisecond"
           }
         ]
