@@ -129,8 +129,6 @@ zinit wait'1' as'command' lucid for \
     atpull'%atclone' pick"bin/n" \
         tj/n
 
-# others
-
 ## auto compiling zshrc & run additional setup
 zinit wait'1' lucid nocd for \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
