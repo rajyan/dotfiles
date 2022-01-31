@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1643623514718,
+  "lastUpdate": 1643623648818,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -1981,6 +1981,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time Linux",
             "value": "52.044803882857146",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "rajyan",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e87e619cadefb1f723fb265974de16e09bd8c263",
+          "message": "bump LICENSE",
+          "timestamp": "2022-01-31T18:50:32+09:00",
+          "tree_id": "bf87ddd984b702dcf48305e6d63fb224ab1ea92b",
+          "url": "https://github.com/rajyan/dotfiles/commit/e87e619cadefb1f723fb265974de16e09bd8c263"
+        },
+        "date": 1643623647441,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macOS",
+            "value": "97.55849611846153",
             "unit": "millisecond"
           }
         ]
