@@ -24,3 +24,7 @@
 	autocrlf = input
 [credential]
 	helper = manager-core
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
