@@ -28,6 +28,10 @@ jobs:
       - name: Install zsh for macOS
         if: runner.os == 'macOS'
         run: brew install zsh
+
+      - name: Set brew to PATH
+        if: runner.os == 'Linux'
+        run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
       
       - name: Set cache path to env
         run: |
