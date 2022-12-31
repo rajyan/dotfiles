@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672468635776,
+  "lastUpdate": 1672469658232,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -2300,6 +2300,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macOS",
             "value": "89.47516044625",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "3bcfa427b3831f15a3cf1c844dbf3bd71c1524ec",
+          "message": "delete mysql",
+          "timestamp": "2022-12-31T15:47:15+09:00",
+          "tree_id": "eef7c54e36e8c86157347316d17eec7a2dc3e85a",
+          "url": "https://github.com/rajyan/dotfiles/commit/3bcfa427b3831f15a3cf1c844dbf3bd71c1524ec"
+        },
+        "date": 1672469656890,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macOS",
+            "value": "91.83310260142856",
             "unit": "millisecond"
           }
         ]
