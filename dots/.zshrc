@@ -87,20 +87,6 @@ zinit wait'1' as'command' from"gh-r" lucid for \
     atinit'export GCM_CREDENTIAL_STORE=keychain' \
     GitCredentialManager/git-credential-manager
 
-## pyenv
-zinit wait'1' as'command' lucid for \
-    atclone'bin/pyenv init - >! pyenv.zsh' \
-    atclone'bin/pyenv init --path >> pyenv.zsh' \
-    atclone'src/configure && make -C src' \
-    atclone'LATEST=$(bin/pyenv install --list | grep -E "^\s*([0-9]+\.[0-9]+\.[0-9]+)$" | tail -1 | tr -d "[[:space:]]")' \
-    atclone'bin/pyenv install -s $LATEST && bin/pyenv global $LATEST' \
-    atclone'"$(bin/pyenv root)"/shims/pip install --upgrade pip' \
-    atclone'"$(bin/pyenv root)"/shims/pip completion -z >! pip.zsh' \
-    atpull'%atclone' \
-    atload'export PYENV_ROOT="$HOME/.pyenv"' \
-    multisrc'{pyenv,pip}.zsh' pick'bin/pyenv' \
-        pyenv/pyenv
-
 ## homebrew
 zinit wait'1' as'command' lucid for \
     atclone'./install.sh' \
