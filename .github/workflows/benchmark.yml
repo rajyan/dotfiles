@@ -20,7 +20,7 @@ jobs:
       fail-fast: false
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Install zsh for Ubuntu
         if: runner.os == 'Linux'
@@ -38,7 +38,7 @@ jobs:
           echo "brew-opt=$(brew --prefix)/opt" >> $GITHUB_ENV
           echo "brew-cellar=$(brew --cellar)" >> $GITHUB_ENV
       - name: Cache development dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with: 
           path: |
             ~/.n
@@ -54,7 +54,7 @@ jobs:
           hyperfine --show-output --warmup 3 'zsh -i -c exit' -n "zsh load time $RUNNER_OS" --export-json result.json
           jq '.results[] | .["name"] = .command | .["unit"] = "millisecond" | .["value"] = (.mean * 1000 | tostring) | [{name, unit, value}]' result.json > bench.json
       - name: Store bench
-        uses: benchmark-action/github-action-benchmark@v1.10.0
+        uses: benchmark-action/github-action-benchmark@v1.15.0
         with:
           tool: "customSmallerIsBetter"
           output-file-path: bench.json
