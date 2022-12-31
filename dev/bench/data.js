@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672468593967,
+  "lastUpdate": 1672468635776,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -2271,6 +2271,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macOS",
             "value": "89.547729845",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "4cc5b261741daa30b9981434707e70e6f763467f",
+          "message": "fix credential-manager install",
+          "timestamp": "2022-12-31T15:24:53+09:00",
+          "tree_id": "4e7077ebeece916113194ae48d558525d1c274e1",
+          "url": "https://github.com/rajyan/dotfiles/commit/4cc5b261741daa30b9981434707e70e6f763467f"
+        },
+        "date": 1672468635201,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macOS",
+            "value": "89.47516044625",
             "unit": "millisecond"
           }
         ]
