@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672471050694,
+  "lastUpdate": 1672472309014,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -2358,6 +2358,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macOS",
             "value": "83.51332238250002",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "a4881a84df30fc0d19d57912c46f696e2e85acf8",
+          "message": "add brew to PATH. refs: https://github.com/actions/runner-images/issues/6283",
+          "timestamp": "2022-12-31T16:31:45+09:00",
+          "tree_id": "e9f78247ea6db53fdeb50b2a04f234a38ebabce1",
+          "url": "https://github.com/rajyan/dotfiles/commit/a4881a84df30fc0d19d57912c46f696e2e85acf8"
+        },
+        "date": 1672472308262,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macOS",
+            "value": "85.32808166000001",
             "unit": "millisecond"
           }
         ]
