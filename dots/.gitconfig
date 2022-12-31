@@ -23,7 +23,7 @@
 [core]
 	autocrlf = input
 [credential]
-	helper = manager-core
+	helper = manager
 [init]
 	defaultBranch = main
 [push]
