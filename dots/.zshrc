@@ -79,11 +79,11 @@ zinit wait lucid for \
 
 ## git credential manager
 zinit wait'1' as'command' from"gh-r" lucid for \
-    if'[[ "$(uname)" == "Linux" ]]' \
+    if'[[ "$(uname)" == "Linux" ]]' bpick'*amd64*[0-9].tar.gz'\
     atinit'export GCM_CREDENTIAL_STORE=secretservice' \
     GitCredentialManager/git-credential-manager
 zinit wait'1' as'command' from"gh-r" lucid for \
-    if'[[ "$(uname)" == "Darwin" ]]' bpick'*osx*gz' \
+    if'[[ "$(uname)" == "Darwin" ]]' bpick'*osx*[0-9].tar.gz' \
     atinit'export GCM_CREDENTIAL_STORE=keychain' \
     GitCredentialManager/git-credential-manager
 
