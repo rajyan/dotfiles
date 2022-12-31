@@ -37,7 +37,6 @@ jobs:
         uses: actions/cache@v2
         with: 
           path: |
-            ~/.pyenv
             ~/.n
             ${{ env.brew-opt }}
             ${{ env.brew-cellar }}
@@ -46,8 +45,6 @@ jobs:
       - name: Initialize zsh
         run: zsh ./init.zsh
 
-      - name: Install hyperfine
-        run: brew install hyperfine
       - name: Benchmark
         run: | 
           hyperfine --show-output --warmup 3 'zsh -i -c exit' -n "zsh load time $RUNNER_OS" --export-json result.json
