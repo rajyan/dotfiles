@@ -85,7 +85,7 @@ zinit wait'1' as'command' from"gh-r" lucid for \
 zinit wait'1' as'command' from"gh-r" lucid for \
     if'[[ "$(uname)" == "Darwin" ]]' bpick'*osx*[0-9].tar.gz' \
     atinit'export GCM_CREDENTIAL_STORE=keychain' \
-    GitCredentialManager/git-credential-manager
+        GitCredentialManager/git-credential-manager
 
 ## homebrew
 zinit wait'1' as'command' lucid for \
