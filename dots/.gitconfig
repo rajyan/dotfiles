@@ -17,7 +17,7 @@
 [color "status"]
 	added = green
 	changed = yellow
-	ntracked = red
+	tracked = red
 [pull]
 	rebase = false
 [core]
