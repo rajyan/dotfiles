@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672707551946,
+  "lastUpdate": 1672888451627,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -2590,6 +2590,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macOS",
             "value": "93.79863259833331",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yota.kimura@gree.net",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "yota.kimura@gree.net",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "e73f7adfda420a276d1d5209b3f61099536a68fe",
+          "message": "add pick to change PATH for gcm osx release, because name of extracted directory has changed",
+          "timestamp": "2023-01-05T12:10:23+09:00",
+          "tree_id": "79aaaf83bb8b274dac2a7444dd7ed04448e4aa10",
+          "url": "https://github.com/rajyan/dotfiles/commit/e73f7adfda420a276d1d5209b3f61099536a68fe"
+        },
+        "date": 1672888450806,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time Linux",
+            "value": "53.85843707090909",
             "unit": "millisecond"
           }
         ]
