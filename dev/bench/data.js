@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672896492350,
+  "lastUpdate": 1672913585359,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -2706,6 +2706,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macOS",
             "value": "109.30377818173915",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e7e05a3dd591c3c18708a4619c0a986c07a91bf0",
+          "message": "Update LICENSE",
+          "timestamp": "2023-01-05T19:09:57+09:00",
+          "tree_id": "6ac15574625e21896d1b3d6fbc848af40228566d",
+          "url": "https://github.com/rajyan/dotfiles/commit/e7e05a3dd591c3c18708a4619c0a986c07a91bf0"
+        },
+        "date": 1672913584427,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time Linux",
+            "value": "53.121170496363646",
             "unit": "millisecond"
           }
         ]
