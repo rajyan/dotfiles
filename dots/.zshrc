@@ -78,17 +78,17 @@ zinit wait lucid for \
 # development
 
 ## git credential manager
-zinit wait'1' as'command' from"gh-r" lucid for \
+zinit wait'1' as'command' from'gh-r' lucid for \
     if'[[ "$(uname)" == "Linux" ]]' bpick'*amd64*[0-9].tar.gz'\
     atinit'export GCM_CREDENTIAL_STORE=secretservice' \
-    GitCredentialManager/git-credential-manager
-zinit wait'1' as'command' from"gh-r" lucid for \
+        GitCredentialManager/git-credential-manager
+zinit wait'1' as'command' from'gh-r' pick'payload/git-credential-manager' lucid for \
     if'[[ "$(uname)" == "Darwin" ]]' bpick'*osx*[0-9].tar.gz' \
     atinit'export GCM_CREDENTIAL_STORE=keychain' \
         GitCredentialManager/git-credential-manager
 
 ## homebrew
-zinit wait'1' as'command' lucid for \
+zinit wait'1' lucid for \
     atclone'./install.sh' \
     atclone'[[ "$(uname)" == "Linux" ]] && HOMEBREW_PREFIX=/home/linuxbrew/.linuxbrew' \
     atclone'[[ "$(uname)" == "Darwin" ]] && [[ "$(uname -m)" != "arm64" ]] && HOMEBREW_PREFIX=/usr/local' \
@@ -101,7 +101,7 @@ zinit wait'1' as'command' lucid for \
         Homebrew/install
 
 ## direnv
-zinit wait'1' as'command' from"gh-r" mv"direnv* -> direnv" lucid for \
+zinit wait'1' as'command' from'gh-r' mv'direnv* -> direnv' lucid for \
     atclone'./direnv hook zsh >! direnv.zsh' \
     atpull'%atclone' src'direnv.zsh' \
         direnv/direnv
@@ -112,7 +112,7 @@ zinit wait'1' as'command' lucid for \
     atclone'PATH="$HOME/.n/bin:$PATH" npm install -g cdk npm-check-updates' \
     atload'export PATH="$HOME/.n/bin:$PATH"' \
     atload'export N_PREFIX="$HOME/.n"' \
-    atpull'%atclone' pick"bin/n" \
+    atpull'%atclone' pick'bin/n' \
         tj/n
 
 ## auto compiling zshrc & run additional setup
