@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1683288493268,
+  "lastUpdate": 1683288537119,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -2878,6 +2878,33 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time Linux",
             "value": "848.0884412999999",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Yohta Kimura",
+            "username": "rajyan",
+            "email": "38206553+rajyan@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "970ed64a43230f8deaf73c267d917f4603b57b36",
+          "message": "add schedule and workflow_dispatch",
+          "timestamp": "2023-05-05T11:51:19Z",
+          "url": "https://github.com/rajyan/dotfiles/commit/970ed64a43230f8deaf73c267d917f4603b57b36"
+        },
+        "date": 1683288535554,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macOS",
+            "value": "608.9988426799999",
             "unit": "millisecond"
           }
         ]
