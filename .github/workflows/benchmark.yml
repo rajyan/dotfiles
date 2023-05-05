@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+  schedule:
+    - cron: '30 23 1 * *'
 
 permissions:
   deployments: write
