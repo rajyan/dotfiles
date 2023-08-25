@@ -28,4 +28,3 @@ set laststatus=2
 set wildmenu
 set history=5000
 
-inoremap <silent> jj <ESC>

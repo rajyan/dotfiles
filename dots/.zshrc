@@ -148,7 +148,6 @@ bindkey "^?" backward-delete-char
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey "^U" backward-kill-line
-bindkey -M viins 'jj' vi-cmd-mode
 
 # aliases
 alias l='ls'
