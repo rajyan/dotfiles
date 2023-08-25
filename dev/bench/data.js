@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1690933722917,
+  "lastUpdate": 1692951742266,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -3154,6 +3154,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time Linux",
             "value": "76.89648072500002",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "yota.kimura@gree.net",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "yota.kimura@gree.net",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "1a5d5f4600ee587549cb3d7f148836a9175f402f",
+          "message": "delete vim jj",
+          "timestamp": "2023-08-25T17:11:23+09:00",
+          "tree_id": "6b99ab5061e0123b57ed7a3e024f14b604c92730",
+          "url": "https://github.com/rajyan/dotfiles/commit/1a5d5f4600ee587549cb3d7f148836a9175f402f"
+        },
+        "date": 1692951740281,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macOS",
+            "value": "105.5283057292308",
             "unit": "millisecond"
           }
         ]
