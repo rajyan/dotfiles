@@ -40,8 +40,10 @@ jobs:
         run: zsh ./init.zsh
 
       - name: Benchmark
+        env:
+          matrix_os: ${{ matrix.os }}
         run: | 
-          hyperfine --show-output --warmup 3 'zsh -i -c exit' -n "zsh load time $RUNNER_OS" --export-json result.json
+          hyperfine --show-output --warmup 3 'zsh -i -c exit' -n "zsh load time $matrix_os" --export-json result.json
           jq '.results[] | .["name"] = .command | .["unit"] = "millisecond" | .["value"] = (.mean * 1000 | tostring) | [{name, unit, value}]' result.json > bench.json
       - name: Store bench
         uses: benchmark-action/github-action-benchmark@v1.15.0
