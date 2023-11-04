@@ -94,7 +94,7 @@ zinit wait'1' lucid for \
     atclone'[[ "$(uname)" == "Darwin" ]] && [[ "$(uname -m)" != "arm64" ]] && HOMEBREW_PREFIX=/usr/local' \
     atclone'[[ "$(uname)" == "Darwin" ]] && [[ "$(uname -m)" == "arm64" ]] && HOMEBREW_PREFIX=/opt/homebrew' \
     atclone'"$HOMEBREW_PREFIX/bin/brew" shellenv > brew.zsh' \
-    atclone'"$HOMEBREW_PREFIX/bin/brew" bundle --global' \
+    atclone'"$HOMEBREW_PREFIX/bin/brew" bundle --global --force' \
     atclone'zinit creinstall "$HOMEBREW_PREFIX/share/zsh/site-functions"' \
     atload'complete -C aws_completer aws' \
     atpull'%atclone' src'brew.zsh' \
