@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1699075526547,
+  "lastUpdate": 1699093803493,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -3718,6 +3718,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-20.04",
             "value": "56.08258315725489",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "23e27518aa23ff7931deaea023f91354bccbe472",
+          "message": "fix aws-cdk install",
+          "timestamp": "2023-11-04T19:25:14+09:00",
+          "tree_id": "41bf7440bb9fdbd45c235bd5f1ae5cf3913409de",
+          "url": "https://github.com/rajyan/dotfiles/commit/23e27518aa23ff7931deaea023f91354bccbe472"
+        },
+        "date": 1699093802226,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macos-13",
+            "value": "68.52450248",
             "unit": "millisecond"
           }
         ]
