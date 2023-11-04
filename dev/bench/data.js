@@ -26,7 +26,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "39.18398130231884",
             "unit": "millisecond"
           }
@@ -55,7 +55,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "72.64248554146343",
             "unit": "millisecond"
           }
@@ -84,7 +84,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "54.44604261999999",
             "unit": "millisecond"
           }
@@ -113,7 +113,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "78.90021784571427",
             "unit": "millisecond"
           }
@@ -142,7 +142,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "49.93134373034482",
             "unit": "millisecond"
           }
@@ -171,7 +171,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "102.71205626370372",
             "unit": "millisecond"
           }
@@ -200,7 +200,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "60.76347044612245",
             "unit": "millisecond"
           }
@@ -229,7 +229,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "89.6314790524138",
             "unit": "millisecond"
           }
@@ -258,7 +258,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "49.91771012714287",
             "unit": "millisecond"
           }
@@ -287,7 +287,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "93.41495622242422",
             "unit": "millisecond"
           }
@@ -316,7 +316,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "50.142894619661",
             "unit": "millisecond"
           }
@@ -345,7 +345,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "92.48511342709678",
             "unit": "millisecond"
           }
@@ -374,7 +374,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "163.5852895355556",
             "unit": "millisecond"
           }
@@ -403,7 +403,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "108.37714860571431",
             "unit": "millisecond"
           }
@@ -432,7 +432,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "50.4299061724138",
             "unit": "millisecond"
           }
@@ -461,7 +461,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "61.88700532888888",
             "unit": "millisecond"
           }
@@ -490,7 +490,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "90.19973443375",
             "unit": "millisecond"
           }
@@ -519,7 +519,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "88.16206884307692",
             "unit": "millisecond"
           }
@@ -548,7 +548,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "50.7180250292857",
             "unit": "millisecond"
           }
@@ -577,7 +577,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "107.0436185",
             "unit": "millisecond"
           }
@@ -606,7 +606,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "60.534459676326506",
             "unit": "millisecond"
           }
@@ -635,7 +635,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "99.15529746315788",
             "unit": "millisecond"
           }
@@ -664,7 +664,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "54.12150865636366",
             "unit": "millisecond"
           }
@@ -693,7 +693,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "92.09900096",
             "unit": "millisecond"
           }
@@ -722,7 +722,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "86.37238974424243",
             "unit": "millisecond"
           }
@@ -751,7 +751,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "63.80607082170214",
             "unit": "millisecond"
           }
@@ -780,7 +780,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "103.91276791333335",
             "unit": "millisecond"
           }
@@ -809,7 +809,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "60.54336037666666",
             "unit": "millisecond"
           }
@@ -836,7 +836,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "95.96984453272728",
             "unit": "millisecond"
           }
@@ -863,7 +863,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "58.5550775375",
             "unit": "millisecond"
           }
@@ -892,7 +892,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "111.55743648181819",
             "unit": "millisecond"
           }
@@ -921,7 +921,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "70.37438167076922",
             "unit": "millisecond"
           }
@@ -948,7 +948,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "90.89743692303033",
             "unit": "millisecond"
           }
@@ -975,7 +975,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "54.94002945636363",
             "unit": "millisecond"
           }
@@ -1004,7 +1004,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "101.3505690214286",
             "unit": "millisecond"
           }
@@ -1033,7 +1033,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "53.43844946545455",
             "unit": "millisecond"
           }
@@ -1061,7 +1061,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "97.63825784206898",
             "unit": "millisecond"
           }
@@ -1089,7 +1089,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "57.032870280000004",
             "unit": "millisecond"
           }
@@ -1117,7 +1117,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "65.93853979272728",
             "unit": "millisecond"
           }
@@ -1145,7 +1145,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "99.08538133333334",
             "unit": "millisecond"
           }
@@ -1172,7 +1172,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "81.16440398470588",
             "unit": "millisecond"
           }
@@ -1199,7 +1199,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "53.38076353411764",
             "unit": "millisecond"
           }
@@ -1226,7 +1226,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "63.299008888936164",
             "unit": "millisecond"
           }
@@ -1253,7 +1253,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "116.40652314148149",
             "unit": "millisecond"
           }
@@ -1280,7 +1280,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "101.70897135999998",
             "unit": "millisecond"
           }
@@ -1307,7 +1307,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "63.73833352340427",
             "unit": "millisecond"
           }
@@ -1334,7 +1334,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "108.13720922296298",
             "unit": "millisecond"
           }
@@ -1361,7 +1361,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "50.12183489636362",
             "unit": "millisecond"
           }
@@ -1388,7 +1388,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "99.48975627241379",
             "unit": "millisecond"
           }
@@ -1415,7 +1415,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "59.80715035755102",
             "unit": "millisecond"
           }
@@ -1442,7 +1442,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "82.45174791",
             "unit": "millisecond"
           }
@@ -1469,7 +1469,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "92.75171703818185",
             "unit": "millisecond"
           }
@@ -1498,7 +1498,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "158.43013501333334",
             "unit": "millisecond"
           }
@@ -1527,7 +1527,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "59.843718064897935",
             "unit": "millisecond"
           }
@@ -1556,7 +1556,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "90.11123434307693",
             "unit": "millisecond"
           }
@@ -1583,7 +1583,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "62.21420788734695",
             "unit": "millisecond"
           }
@@ -1610,7 +1610,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "49.631583435254235",
             "unit": "millisecond"
           }
@@ -1637,7 +1637,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "44.00327033522388",
             "unit": "millisecond"
           }
@@ -1664,7 +1664,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "91.28738526615383",
             "unit": "millisecond"
           }
@@ -1691,7 +1691,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "93.07096052000003",
             "unit": "millisecond"
           }
@@ -1718,7 +1718,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "90.97159737999999",
             "unit": "millisecond"
           }
@@ -1747,7 +1747,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "60.97881019083334",
             "unit": "millisecond"
           }
@@ -1776,7 +1776,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "79.16515440750005",
             "unit": "millisecond"
           }
@@ -1805,7 +1805,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "54.617262036666666",
             "unit": "millisecond"
           }
@@ -1834,7 +1834,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "94.55128734",
             "unit": "millisecond"
           }
@@ -1863,7 +1863,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "48.27200399714286",
             "unit": "millisecond"
           }
@@ -1892,7 +1892,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "87.46669718000001",
             "unit": "millisecond"
           }
@@ -1921,7 +1921,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "43.45264717104478",
             "unit": "millisecond"
           }
@@ -1950,7 +1950,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "94.04224868142856",
             "unit": "millisecond"
           }
@@ -1979,7 +1979,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "52.044803882857146",
             "unit": "millisecond"
           }
@@ -2008,7 +2008,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "97.55849611846153",
             "unit": "millisecond"
           }
@@ -2037,7 +2037,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "136.49567690842105",
             "unit": "millisecond"
           }
@@ -2066,7 +2066,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "62.066220444347834",
             "unit": "millisecond"
           }
@@ -2095,7 +2095,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "55.63349350307692",
             "unit": "millisecond"
           }
@@ -2124,7 +2124,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "103.69026143999999",
             "unit": "millisecond"
           }
@@ -2153,7 +2153,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "83.10976727272725",
             "unit": "millisecond"
           }
@@ -2182,7 +2182,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "66.07801486666665",
             "unit": "millisecond"
           }
@@ -2211,7 +2211,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "110.06358474000001",
             "unit": "millisecond"
           }
@@ -2240,7 +2240,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "57.35286903333334",
             "unit": "millisecond"
           }
@@ -2269,7 +2269,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "89.547729845",
             "unit": "millisecond"
           }
@@ -2298,7 +2298,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "89.47516044625",
             "unit": "millisecond"
           }
@@ -2327,7 +2327,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "91.83310260142856",
             "unit": "millisecond"
           }
@@ -2356,7 +2356,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "83.51332238250002",
             "unit": "millisecond"
           }
@@ -2385,7 +2385,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "85.32808166000001",
             "unit": "millisecond"
           }
@@ -2414,7 +2414,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "65.06475300382978",
             "unit": "millisecond"
           }
@@ -2443,7 +2443,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "113.54720705724138",
             "unit": "millisecond"
           }
@@ -2472,7 +2472,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "66.34605446272728",
             "unit": "millisecond"
           }
@@ -2501,7 +2501,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "53.04707108592594",
             "unit": "millisecond"
           }
@@ -2530,7 +2530,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "117.10961204",
             "unit": "millisecond"
           }
@@ -2559,7 +2559,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "64.07218501581397",
             "unit": "millisecond"
           }
@@ -2588,7 +2588,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "93.79863259833331",
             "unit": "millisecond"
           }
@@ -2617,7 +2617,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "53.85843707090909",
             "unit": "millisecond"
           }
@@ -2646,7 +2646,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "103.42187171428573",
             "unit": "millisecond"
           }
@@ -2675,7 +2675,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "63.25089319714286",
             "unit": "millisecond"
           }
@@ -2704,7 +2704,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "109.30377818173915",
             "unit": "millisecond"
           }
@@ -2733,7 +2733,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "53.121170496363646",
             "unit": "millisecond"
           }
@@ -2762,7 +2762,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "66.27482042869563",
             "unit": "millisecond"
           }
@@ -2791,7 +2791,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "97.49131132000001",
             "unit": "millisecond"
           }
@@ -2820,7 +2820,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "107.80454904347826",
             "unit": "millisecond"
           }
@@ -2849,7 +2849,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "689.7569671000002",
             "unit": "millisecond"
           }
@@ -2876,7 +2876,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "848.0884412999999",
             "unit": "millisecond"
           }
@@ -2903,7 +2903,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "608.9988426799999",
             "unit": "millisecond"
           }
@@ -2932,7 +2932,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "930.4589465200002",
             "unit": "millisecond"
           }
@@ -2961,7 +2961,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "53.95367651185189",
             "unit": "millisecond"
           }
@@ -2990,7 +2990,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "111.72150179",
             "unit": "millisecond"
           }
@@ -3017,7 +3017,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "55.08090148226416",
             "unit": "millisecond"
           }
@@ -3044,7 +3044,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "87.2854057032258",
             "unit": "millisecond"
           }
@@ -3071,7 +3071,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "107.5028939",
             "unit": "millisecond"
           }
@@ -3098,7 +3098,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "57.66489091058825",
             "unit": "millisecond"
           }
@@ -3125,7 +3125,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "108.50919262727275",
             "unit": "millisecond"
           }
@@ -3152,7 +3152,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "76.89648072500002",
             "unit": "millisecond"
           }
@@ -3181,7 +3181,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "105.5283057292308",
             "unit": "millisecond"
           }
@@ -3210,7 +3210,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "62.942816086122455",
             "unit": "millisecond"
           }
@@ -3237,7 +3237,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "56.47362987962264",
             "unit": "millisecond"
           }
@@ -3264,7 +3264,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "90.45878989225808",
             "unit": "millisecond"
           }
@@ -3291,7 +3291,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "56.14111460230768",
             "unit": "millisecond"
           }
@@ -3318,7 +3318,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "85.5391140219355",
             "unit": "millisecond"
           }
@@ -3345,7 +3345,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "62.347697989565184",
             "unit": "millisecond"
           }
@@ -3372,7 +3372,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "92.50583861333334",
             "unit": "millisecond"
           }
@@ -3399,7 +3399,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "67.34031763023258",
             "unit": "millisecond"
           }
@@ -3426,7 +3426,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "87.11687518875",
             "unit": "millisecond"
           }
@@ -3455,7 +3455,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "70.89697867609756",
             "unit": "millisecond"
           }
@@ -3484,7 +3484,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "69.36043665888887",
             "unit": "millisecond"
           }
@@ -3513,7 +3513,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "36.36718292",
             "unit": "millisecond"
           }
@@ -3542,7 +3542,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time Linux",
+            "name": "zsh load time ubuntu-20.04",
             "value": "55.100192636296306",
             "unit": "millisecond"
           }
@@ -3571,7 +3571,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "71.30256975428573",
             "unit": "millisecond"
           }
@@ -3600,7 +3600,7 @@ window.BENCHMARK_DATA = {
         "tool": "customSmallerIsBetter",
         "benches": [
           {
-            "name": "zsh load time macOS",
+            "name": "zsh load time macos-12",
             "value": "69.75293477225807",
             "unit": "millisecond"
           }
