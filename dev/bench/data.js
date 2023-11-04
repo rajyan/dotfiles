@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1699097253993,
+  "lastUpdate": 1699097343063,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -4153,6 +4153,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-20.04",
             "value": "58.15367564000001",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "cc87d520f978027971ea122c36eb035120ce2671",
+          "message": "dircolors doesn't work for osx",
+          "timestamp": "2023-11-04T20:17:03+09:00",
+          "tree_id": "c81373e354d29db7f17e6a70cb4e64a2a3e4000d",
+          "url": "https://github.com/rajyan/dotfiles/commit/cc87d520f978027971ea122c36eb035120ce2671"
+        },
+        "date": 1699097342554,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time ubuntu-22.04",
+            "value": "73.94171978761904",
             "unit": "millisecond"
           }
         ]
