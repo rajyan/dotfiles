@@ -109,7 +109,7 @@ zinit wait'1' as'command' from'gh-r' mv'direnv* -> direnv' lucid for \
 ## n
 zinit wait'1' as'command' lucid for \
     atclone'N_PREFIX="$HOME/.n" bin/n lts' \
-    atclone'PATH="$HOME/.n/bin:$PATH" npm install -g cdk npm-check-updates' \
+    atclone'PATH="$HOME/.n/bin:$PATH" npm install -g aws-cdk npm-check-updates' \
     atload'export PATH="$HOME/.n/bin:$PATH"' \
     atload'export N_PREFIX="$HOME/.n"' \
     atpull'%atclone' pick'bin/n' \
