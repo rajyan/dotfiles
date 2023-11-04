@@ -47,7 +47,7 @@ jobs:
             ~/.n
             ${{ env.brew-opt }}
             ${{ env.brew-cellar }}
-          key: ${{ runner.os }}-cache
+          key: ${{ matrix.os }}-cache
 
       - name: Initialize zsh
         run: zsh ./init.zsh
