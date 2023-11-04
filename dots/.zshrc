@@ -69,7 +69,7 @@ zinit wait lucid for \
 zinit snippet PZTM::history
 
 ## dircolors
-zinit wait lucid for \
+zinit wait if'[[ "$(uname)" == "Linux" ]]' lucid for \
     atclone'dircolors -b src/dir_colors >! clrs.zsh' \
     atpull'%atclone' pick'clrs.zsh' nocompile'!' \
     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”' \
