@@ -35,19 +35,6 @@ jobs:
       - name: Set brew to PATH
         if: runner.os == 'Linux'
         run: echo "/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin" >> $GITHUB_PATH
-      
-      - name: Set cache path to env
-        run: |
-          echo "brew-opt=$(brew --prefix)/opt" >> $GITHUB_ENV
-          echo "brew-cellar=$(brew --cellar)" >> $GITHUB_ENV
-      - name: Cache development dependencies
-        uses: actions/cache@v3
-        with: 
-          path: |
-            ~/.n
-            ${{ env.brew-opt }}
-            ${{ env.brew-cellar }}
-          key: ${{ matrix.os }}-cache
 
       - name: Initialize zsh
         run: zsh ./init.zsh
