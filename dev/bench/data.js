@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1699096421398,
+  "lastUpdate": 1699096494763,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -4037,6 +4037,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-22.04",
             "value": "61.273832697777756",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "dd0e76bc03622bd186a5176d12a8a150f625067f",
+          "message": "fix",
+          "timestamp": "2023-11-04T20:01:33+09:00",
+          "tree_id": "1cb08efc02ce77798996b4bf825a18774f75fc91",
+          "url": "https://github.com/rajyan/dotfiles/commit/dd0e76bc03622bd186a5176d12a8a150f625067f"
+        },
+        "date": 1699096494261,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time ubuntu-20.04",
+            "value": "78.43332141538461",
             "unit": "millisecond"
           }
         ]
