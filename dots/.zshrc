@@ -73,7 +73,7 @@ zinit wait lucid for \
     atclone'dircolors -b src/dir_colors >! clrs.zsh' \
     atpull'%atclone' pick'clrs.zsh' nocompile'!' \
     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”' \
-        arcticicestudio/nord-dircolors
+        nordtheme/dircolors
 
 # development
 
