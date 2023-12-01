@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1701474402115,
+  "lastUpdate": 1701474678972,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -4263,6 +4263,33 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macos-12",
             "value": "74.14030101487181",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Yohta Kimura",
+            "username": "rajyan",
+            "email": "kitakita7617@gmail.com"
+          },
+          "committer": {
+            "name": "Yohta Kimura",
+            "username": "rajyan",
+            "email": "kitakita7617@gmail.com"
+          },
+          "id": "cc87d520f978027971ea122c36eb035120ce2671",
+          "message": "dircolors doesn't work for osx",
+          "timestamp": "2023-11-04T11:17:03Z",
+          "url": "https://github.com/rajyan/dotfiles/commit/cc87d520f978027971ea122c36eb035120ce2671"
+        },
+        "date": 1701474676987,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macos-13",
+            "value": "71.51271570756757",
             "unit": "millisecond"
           }
         ]
