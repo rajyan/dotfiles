@@ -1,5 +1,4 @@
 tap "homebrew/bundle"
-tap "homebrew/core"
 tap "linuxbrew/xorg"
 brew "ansible"
 brew "autoconf"
