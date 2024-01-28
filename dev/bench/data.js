@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1706409545400,
+  "lastUpdate": 1706409548953,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -4543,6 +4543,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-20.04",
             "value": "36.75680671641026",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "kitakita7617@gmail.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "855579038096a4da0ead90dd17f22c2524bc9227",
+          "message": "remove tap brew/core",
+          "timestamp": "2024-01-28T11:33:49+09:00",
+          "tree_id": "ef596720bf6dae8e35246ecb4389b13977c8ff69",
+          "url": "https://github.com/rajyan/dotfiles/commit/855579038096a4da0ead90dd17f22c2524bc9227"
+        },
+        "date": 1706409547040,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macos-12",
+            "value": "115.79764692",
             "unit": "millisecond"
           }
         ]
