@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1704152437946,
+  "lastUpdate": 1706409545400,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -4514,6 +4514,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-22.04",
             "value": "48.49134571333334",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "9f1335194c45837a8d39549cd4fb9d072e4d7f5d",
+          "message": "remove tap php",
+          "timestamp": "2024-01-28T11:34:46+09:00",
+          "tree_id": "5057fff555b7e6ff018e5f53a555bf4e8308232f",
+          "url": "https://github.com/rajyan/dotfiles/commit/9f1335194c45837a8d39549cd4fb9d072e4d7f5d"
+        },
+        "date": 1706409545074,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time ubuntu-20.04",
+            "value": "36.75680671641026",
             "unit": "millisecond"
           }
         ]
