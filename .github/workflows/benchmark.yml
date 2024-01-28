@@ -23,7 +23,7 @@ jobs:
       fail-fast: false
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install zsh for Ubuntu
         if: runner.os == 'Linux'
@@ -43,7 +43,7 @@ jobs:
           hyperfine --show-output --warmup 3 'zsh -i -c exit' -n "zsh load time $matrix_os" --export-json result.json
           jq '.results[] | .["name"] = .command | .["unit"] = "millisecond" | .["value"] = (.mean * 1000 | tostring) | [{name, unit, value}]' result.json > bench.json
       - name: Store bench
-        uses: benchmark-action/github-action-benchmark@v1.15.0
+        uses: benchmark-action/github-action-benchmark@v1.19.2
         with:
           tool: "customSmallerIsBetter"
           output-file-path: bench.json
