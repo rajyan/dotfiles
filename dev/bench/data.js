@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1706831097449,
+  "lastUpdate": 1709336297489,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -4970,6 +4970,33 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macos-12",
             "value": "75.95931054275863",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Yohta Kimura",
+            "username": "rajyan",
+            "email": "38206553+rajyan@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "Yohta Kimura",
+            "username": "rajyan",
+            "email": "38206553+rajyan@users.noreply.github.com"
+          },
+          "id": "f90723a831c7e5a54218fce12c60d5ca264f783a",
+          "message": "update actions",
+          "timestamp": "2024-01-28T02:45:20Z",
+          "url": "https://github.com/rajyan/dotfiles/commit/f90723a831c7e5a54218fce12c60d5ca264f783a"
+        },
+        "date": 1709336297039,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time ubuntu-22.04",
+            "value": "44.436254775151525",
             "unit": "millisecond"
           }
         ]
