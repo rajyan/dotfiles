@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1733846449285,
+  "lastUpdate": 1733846484030,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -6081,6 +6081,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-20.04",
             "value": "44.99998157384615",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "a42e61b872884add9eb7bb65ae327cf4a3adc7e2",
+          "message": "remove unused brew libs",
+          "timestamp": "2024-12-11T00:56:41+09:00",
+          "tree_id": "738b5fb283fa39ca6754ea683250f4767c4f9aec",
+          "url": "https://github.com/rajyan/dotfiles/commit/a42e61b872884add9eb7bb65ae327cf4a3adc7e2"
+        },
+        "date": 1733846482641,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macos-13",
+            "value": "119.5905259616667",
             "unit": "millisecond"
           }
         ]
