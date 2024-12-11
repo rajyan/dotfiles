@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1733877462839,
+  "lastUpdate": 1733877480657,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -6429,6 +6429,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-22.04",
             "value": "45.680309134920655",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a3e482dbb73aa85c42a4cd227ae6791c66a6eff5",
+          "message": "Delete dots/.myclirc",
+          "timestamp": "2024-12-11T09:34:51+09:00",
+          "tree_id": "550bf782c609f3d4d21e58c53063b26687caa085",
+          "url": "https://github.com/rajyan/dotfiles/commit/a3e482dbb73aa85c42a4cd227ae6791c66a6eff5"
+        },
+        "date": 1733877479683,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time ubuntu-24.04",
+            "value": "42.80049016927536",
             "unit": "millisecond"
           }
         ]
