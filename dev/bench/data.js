@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1733877161826,
+  "lastUpdate": 1733877338137,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -6226,6 +6226,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-22.04",
             "value": "45.418614077460305",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0c31ff745b6e4581b681735e6939c4e7bc776596",
+          "message": "Delete dots/.gdbinit",
+          "timestamp": "2024-12-11T09:33:32+09:00",
+          "tree_id": "4a2f0a3d10fc49f46c023504ef1aa05b1de41771",
+          "url": "https://github.com/rajyan/dotfiles/commit/0c31ff745b6e4581b681735e6939c4e7bc776596"
+        },
+        "date": 1733877336574,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macos-15",
+            "value": "44.961673097931055",
             "unit": "millisecond"
           }
         ]
