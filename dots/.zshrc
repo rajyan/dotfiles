@@ -14,6 +14,7 @@ autoload -Uz _zinit
 ### End of Zinit's installer chunk
 
 # zsh plugins in light-mode
+zinit light zdharma-continuum/z-a-bin-gem-node
 zinit wait lucid light-mode for \
     atinit'zicompinit; zicdreplay' \
         zdharma-continuum/fast-syntax-highlighting \
@@ -69,7 +70,7 @@ zinit wait lucid for \
 zinit snippet PZTM::history
 
 ## dircolors
-zinit wait if'[[ "$(uname)" == "Linux" ]]' lucid for \
+zinit wait lucid for \
     atclone'dircolors -b src/dir_colors >! clrs.zsh' \
     atpull'%atclone' pick'clrs.zsh' nocompile'!' \
     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”' \
@@ -89,39 +90,38 @@ zinit lucid for \
         Homebrew/install
 
 ## git credential manager
-zinit wait'1' as'command' from'gh-r' lucid for \
-    if'[[ "$(uname)" == "Linux" ]]' bpick'*amd64*[0-9].tar.gz'\
+zinit wait'1' from'gh-r' sbin'git-credential-manager' lucid for \
+    if'[[ "$(uname)" == "Linux" ]]' bpick'*amd64*[0-9].tar.gz' \
     atinit'export GCM_CREDENTIAL_STORE=secretservice' \
         @git-ecosystem/git-credential-manager
-zinit wait'1' as'command' from'gh-r' pick'payload/git-credential-manager' lucid for \
+zinit wait'1' from'gh-r' sbin'git-credential-manager' lucid for \
     if'[[ "$(uname)" == "Darwin" ]]' bpick'*osx*[0-9].tar.gz' \
     atinit'export GCM_CREDENTIAL_STORE=keychain' \
         @git-ecosystem/git-credential-manager
 
 ## fzf
-zinit wait'1' lucid as=program pick='$ZPFX/bin/fzf' for \
-    atclone'make PREFIX=$ZPFX install' \
-    atclone'command cp shell/completion.zsh _fzf_completion && command cp bin/fzf $ZPFX/bin' \
+zinit wait'1' sbin'bin/fzf' lucid for \
+    has'go' make'!''PREFIX=$ZPFX install' \
+    atclone'command cp shell/completion.zsh _fzf_completion' \
     atpull'%atclone' \
         junegunn/fzf
 
 ## direnv
-zinit wait'1' as'command' from'gh-r' mv'direnv* -> direnv' lucid for \
+zinit wait'1' from'gh-r' mv'direnv* -> direnv' sbin'direnv' lucid for \
     atclone'./direnv hook zsh >! direnv.zsh' \
     atpull'%atclone' src'direnv.zsh' \
         direnv/direnv
 
 ## n
-zinit wait'1' as'command' lucid for \
-    atclone'N_PREFIX="$HOME/.n" bin/n lts' \
-    atclone'PATH="$HOME/.n/bin:$PATH" npm install -g aws-cdk npm-check-updates' \
-    atload'export PATH="$HOME/.n/bin:$PATH"' \
-    atload'export N_PREFIX="$HOME/.n"' \
-    atpull'%atclone' pick'bin/n' \
+zinit wait'1' sbin'bin/n' lucid for \
+    atclone'N_PREFIX="$ZPFX" bin/n lts' \
+    atclone'npm install -g aws-cdk npm-check-updates' \
+    atload'export N_PREFIX="$ZPFX"' \
+    atpull'%atclone' \
         tj/n
 
 ## auto compiling zshrc & run additional setup
-zinit wait'1' lucid nocd for \
+zinit wait'1' as'null' lucid nocd for \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
     atload'export PATH="$HOME/.local/bin:$PATH"' \
         rajyan/null
