@@ -113,7 +113,7 @@ zinit wait'1' from'gh-r' mv'direnv* -> direnv' sbin'direnv' lucid for \
         direnv/direnv
 
 ## n
-zinit wait'1' sbin'bin/n' lucid for \
+zinit wait'1' as'command' sbin'bin/n' lucid for \
     atclone'N_PREFIX="$ZPFX" bin/n lts' \
     atclone'npm install -g aws-cdk npm-check-updates' \
     atload'export N_PREFIX="$ZPFX"' \
