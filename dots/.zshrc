@@ -119,7 +119,7 @@ zinit wait'1' as'command' lucid for \
 zinit wait'1' lucid nocd for \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
     atload'export PATH="$HOME/.local/bin:$PATH"' \
-        https://raw.githubusercontent.com/rajyan/dotfiles/master/backimg.zsh
+        rajyan/null
 
 # keybindings
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
