@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1734252303185,
+  "lastUpdate": 1734252340251,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -6516,6 +6516,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macos-15",
             "value": "56.687963905454545",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "ea63bbb08013ef9aab1e3d9f96e6743e86036a52",
+          "message": "fix: cleanup `$PATH` using zdharma-continuum/z-a-bin-gem-node",
+          "timestamp": "2024-12-15T17:42:37+09:00",
+          "tree_id": "3db4dc55fc088aaf5b4bdd53e00d30ff5e2fc16f",
+          "url": "https://github.com/rajyan/dotfiles/commit/ea63bbb08013ef9aab1e3d9f96e6743e86036a52"
+        },
+        "date": 1734252339897,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time ubuntu-24.04",
+            "value": "49.22571920999999",
             "unit": "millisecond"
           }
         ]
