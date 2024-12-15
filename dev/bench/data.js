@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1734252744853,
+  "lastUpdate": 1734252750534,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -6632,6 +6632,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macos-15",
             "value": "51.296367819090904",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "9bc34da45067cbaa312e65fbe646e83565c29296",
+          "message": "chore: remove iTerm settings",
+          "timestamp": "2024-12-15T17:50:17+09:00",
+          "tree_id": "37126a4b74ff6a053e8a644ab2464615cc999a00",
+          "url": "https://github.com/rajyan/dotfiles/commit/9bc34da45067cbaa312e65fbe646e83565c29296"
+        },
+        "date": 1734252748995,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macos-14",
+            "value": "43.16726363968254",
             "unit": "millisecond"
           }
         ]
