@@ -77,6 +77,17 @@ zinit wait if'[[ "$(uname)" == "Linux" ]]' lucid for \
 
 # development
 
+## homebrew
+zinit lucid for \
+    atclone'./install.sh' \
+    atclone'[[ "$(uname)" == "Linux" ]] && HOMEBREW_PREFIX=/home/linuxbrew/.linuxbrew' \
+    atclone'[[ "$(uname)" == "Darwin" ]] && HOMEBREW_PREFIX=/opt/homebrew' \
+    atclone'"$HOMEBREW_PREFIX/bin/brew" shellenv > brew.zsh' \
+    atclone'"$HOMEBREW_PREFIX/bin/brew" bundle --global --force' \
+    atclone'zinit creinstall "$HOMEBREW_PREFIX/share/zsh/site-functions"' \
+    atpull'%atclone' src'brew.zsh' \
+        Homebrew/install
+
 ## git credential manager
 zinit wait'1' as'command' from'gh-r' lucid for \
     if'[[ "$(uname)" == "Linux" ]]' bpick'*amd64*[0-9].tar.gz'\
@@ -87,18 +98,12 @@ zinit wait'1' as'command' from'gh-r' pick'payload/git-credential-manager' lucid 
     atinit'export GCM_CREDENTIAL_STORE=keychain' \
         @git-ecosystem/git-credential-manager
 
-## homebrew
-zinit wait'1' lucid for \
-    atclone'./install.sh' \
-    atclone'[[ "$(uname)" == "Linux" ]] && HOMEBREW_PREFIX=/home/linuxbrew/.linuxbrew' \
-    atclone'[[ "$(uname)" == "Darwin" ]] && [[ "$(uname -m)" != "arm64" ]] && HOMEBREW_PREFIX=/usr/local' \
-    atclone'[[ "$(uname)" == "Darwin" ]] && [[ "$(uname -m)" == "arm64" ]] && HOMEBREW_PREFIX=/opt/homebrew' \
-    atclone'"$HOMEBREW_PREFIX/bin/brew" shellenv > brew.zsh' \
-    atclone'"$HOMEBREW_PREFIX/bin/brew" bundle --global --force' \
-    atclone'zinit creinstall "$HOMEBREW_PREFIX/share/zsh/site-functions"' \
-    atload'complete -C aws_completer aws' \
-    atpull'%atclone' src'brew.zsh' \
-        Homebrew/install
+## fzf
+zinit wait'1' lucid as=program pick='$ZPFX/bin/fzf' for \
+    atclone'make PREFIX=$ZPFX install' \
+    atclone'command cp shell/completion.zsh _fzf_completion && command cp bin/fzf $ZPFX/bin' \
+    atpull'%atclone' \
+        junegunn/fzf
 
 ## direnv
 zinit wait'1' as'command' from'gh-r' mv'direnv* -> direnv' lucid for \
