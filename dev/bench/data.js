@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1734252807422,
+  "lastUpdate": 1734252809730,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -6777,6 +6777,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-22.04",
             "value": "52.7606587",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "b80bd88317871445ae54214b0f34074b9dbba06e",
+          "message": "fix: fix hook error",
+          "timestamp": "2024-12-15T17:48:13+09:00",
+          "tree_id": "894a3a8f306325e94e299c68109ec0f734148975",
+          "url": "https://github.com/rajyan/dotfiles/commit/b80bd88317871445ae54214b0f34074b9dbba06e"
+        },
+        "date": 1734252808720,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time ubuntu-22.04",
+            "value": "52.481625277142854",
             "unit": "millisecond"
           }
         ]
