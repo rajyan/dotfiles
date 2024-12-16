@@ -89,6 +89,18 @@ zinit lucid for \
     atpull'%atclone' src'brew.zsh' \
         Homebrew/install
 
+## wezterm
+zinit wait'1' if'[[ "$(uname)" == "Darwin" ]]' from'gh-r' as'null' lucid \
+    mv'WezTerm-*/WezTerm.app -> /Applications/WezTerm.app' sbin'/Applications/WezTerm.app/Contents/MacOS/wezterm*' for \
+        wez/wezterm
+zinit wait'1' if'[[ "$(uname)" == "Linux" ]]' from'gh-r' as'null' lucid \
+    bpick'*.AppImage' mv'*.appimage -> wezterm' sbin'wezterm' for \
+    atclone'./wezterm --appimage-extract' \
+    atclone'command cp ./squashfs-root/*.png ~/.icons/' \
+    atclone'sed "s|=wezterm|=$ZPFX/bin/wezterm|g" ./squashfs-root/*.desktop > ~/.local/share/applications/wezterm.desktop' \
+    atpull'%atclone' \
+        wez/wezterm
+
 ## git credential manager
 zinit wait'1' from'gh-r' as'null' sbin'git-credential-manager' lucid for \
     if'[[ "$(uname)" == "Linux" ]]' bpick'*amd64*[0-9].tar.gz' \
@@ -120,21 +132,21 @@ zinit wait'1' as'null' sbin'bin/n' lucid for \
     atpull'%atclone' \
         tj/n
 
+## aws cli and session-manager
+zinit wait'1' as'null' sbin'session-manager-plugin' depth'1' lucid for \
+    has'go' \
+    atclone'[[ "$(uname)" == "Linux" ]] && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install -b $ZPFX/bin -i $ZPFX/aws-cli --update' \
+    atclone'[[ "$(uname)" == "Debian" ]] && curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg" && sudo installer -pkg AWSCLIV2.pkg -target /' \
+    atclone'make release' \
+    atclone'mv bin/$(uname | tr "[:upper:]" "[:lower:]")_$(uname -m | sed s/aarch64/arm64/ | sed s/x86_64/amd64/)_plugin/session-manager-plugin session-manager-plugin' \
+    atclone'rm -rf aws awscliv2.zip bin' \
+    atpull'%atclone' \
+        aws/session-manager-plugin
+
 ## auto compiling zshrc & run additional setup
 zinit wait'1' as'null' lucid nocd for \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
-    atload'export PATH="$HOME/.local/bin:$PATH"' \
         rajyan/null
-
-zinit wait'2' if'[[ "$(uname)" == "Darwin" ]]' from'gh-r' as'null' lucid \
-    mv'WezTerm-*/WezTerm.app -> /Applications/WezTerm.app' sbin'/Applications/WezTerm.app/Contents/MacOS/wezterm*' for \
-        wez/wezterm
-zinit wait'2' if'[[ "$(uname)" == "Linux" ]]' from'gh-r' as'null' lucid \
-    bpick'*.AppImage' mv'*.appimage -> wezterm' sbin'wezterm' for \
-    atclone'./wezterm --appimage-extract' \
-    atclone'command cp ./squashfs-root/*.png ~/.icons/' \
-    atclone'sed "s|=wezterm|=$ZPFX/bin/wezterm|g" ./squashfs-root/*.desktop > ~/.local/share/applications/wezterm.desktop' \
-        wez/wezterm
 
 # keybindings
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
