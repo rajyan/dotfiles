@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1734350385874,
+  "lastUpdate": 1734352430733,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -7038,6 +7038,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-22.04",
             "value": "54.56318525056603",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "92c9441102befc3a9b647a1caf664706a264b510",
+          "message": "feat: wezterm installation for mac",
+          "timestamp": "2024-12-16T21:31:20+09:00",
+          "tree_id": "2fed262ea0c81d97838798d1a1cea645e6417dc1",
+          "url": "https://github.com/rajyan/dotfiles/commit/92c9441102befc3a9b647a1caf664706a264b510"
+        },
+        "date": 1734352429176,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macos-15",
+            "value": "61.19686826916667",
             "unit": "millisecond"
           }
         ]
