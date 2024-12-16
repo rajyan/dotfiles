@@ -126,6 +126,10 @@ zinit wait'1' as'null' lucid nocd for \
     atload'export PATH="$HOME/.local/bin:$PATH"' \
         rajyan/null
 
+zinit wait'2' if'[[ "$(uname)" == "Darwin" ]]' from'gh-r' as'null' lucid \
+    mv'WezTerm-*/WezTerm.app -> /Applications/WezTerm.app' sbin'/Applications/WezTerm.app/Contents/MacOS/wezterm*' for \
+        wez/wezterm
+
 # keybindings
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
