@@ -90,11 +90,11 @@ zinit lucid for \
         Homebrew/install
 
 ## git credential manager
-zinit wait'1' from'gh-r' sbin'git-credential-manager' lucid for \
+zinit wait'1' from'gh-r' as'null' sbin'git-credential-manager' lucid for \
     if'[[ "$(uname)" == "Linux" ]]' bpick'*amd64*[0-9].tar.gz' \
     atinit'export GCM_CREDENTIAL_STORE=secretservice' \
         @git-ecosystem/git-credential-manager
-zinit wait'1' from'gh-r' sbin'git-credential-manager' lucid for \
+zinit wait'1' from'gh-r' as'null' sbin'git-credential-manager' lucid for \
     if'[[ "$(uname)" == "Darwin" ]]' bpick'*osx*[0-9].tar.gz' \
     atinit'export GCM_CREDENTIAL_STORE=keychain' \
         @git-ecosystem/git-credential-manager
@@ -113,7 +113,7 @@ zinit wait'1' from'gh-r' mv'direnv* -> direnv' sbin'direnv' lucid for \
         direnv/direnv
 
 ## n
-zinit wait'1' as'command' sbin'bin/n' lucid for \
+zinit wait'1' as'null' sbin'bin/n' lucid for \
     atclone'N_PREFIX="$ZPFX" bin/n lts' \
     atclone'npm install -g aws-cdk npm-check-updates' \
     atload'export N_PREFIX="$ZPFX"' \
