@@ -129,6 +129,12 @@ zinit wait'1' as'null' lucid nocd for \
 zinit wait'2' if'[[ "$(uname)" == "Darwin" ]]' from'gh-r' as'null' lucid \
     mv'WezTerm-*/WezTerm.app -> /Applications/WezTerm.app' sbin'/Applications/WezTerm.app/Contents/MacOS/wezterm*' for \
         wez/wezterm
+zinit wait'2' if'[[ "$(uname)" == "Linux" ]]' from'gh-r' as'null' lucid \
+    bpick'*.AppImage' mv'*.appimage -> wezterm' sbin'wezterm' for \
+    atclone'./wezterm --appimage-extract' \
+    atclone'command cp ./squashfs-root/*.png ~/.icons/' \
+    atclone'sed "s|=wezterm|=$ZPFX/bin/wezterm|g" ./squashfs-root/*.desktop > ~/.local/share/applications/wezterm.desktop' \
+        wez/wezterm
 
 # keybindings
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search

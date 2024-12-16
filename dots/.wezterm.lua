@@ -47,8 +47,8 @@ config.background = {
     vertical_align = 'Middle',
     horizontal_align = 'Center',
     hsb = {
-      brightness = 0.05,
-      saturation = 0.1,
+      brightness = 0.03,
+      saturation = 0.5,
       hue = 1.0,
     },
   },
