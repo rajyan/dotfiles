@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1734376254482,
+  "lastUpdate": 1734398933163,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -7386,6 +7386,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-24.04",
             "value": "57.4862025",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "6c66a9960df2a16feceede47fa31a66d8d8140d1",
+          "message": "fix: fix darwin install",
+          "timestamp": "2024-12-17T10:23:59+09:00",
+          "tree_id": "e4323227618a29e112537e56d81bc3597c765548",
+          "url": "https://github.com/rajyan/dotfiles/commit/6c66a9960df2a16feceede47fa31a66d8d8140d1"
+        },
+        "date": 1734398931314,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macos-15",
+            "value": "69.17056037538464",
             "unit": "millisecond"
           }
         ]
