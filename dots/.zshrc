@@ -133,14 +133,12 @@ zinit wait'1' as'null' sbin'bin/n' lucid for \
         tj/n
 
 ## aws cli and session-manager
-zinit wait'1' as'null' sbin'session-manager-plugin' depth'1' lucid for \
+zinit wait'1' as'null' lucid for \
     atclone'[[ "$(uname)" == "Linux" ]] && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install -b $ZPFX/bin -i $ZPFX/aws-cli --update' \
     atclone'[[ "$(uname)" == "Darwin" ]] && curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg" && sudo installer -pkg AWSCLIV2.pkg -target /' \
-    has'go' atclone'make release' \
-    atclone'mv bin/$(uname | tr "[:upper:]" "[:lower:]")_$(uname -m | sed s/aarch64/arm64/ | sed s/x86_64/amd64/)_plugin/session-manager-plugin session-manager-plugin' \
-    atclone'rm -rf aws awscliv2.zip bin' \
+    atclone'[[ "$(uname)" == "Darwin" ]] && curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/mac_arm64/session-manager-plugin.pkg" -o "session-manager-plugin.pkg" && sudo installer -pkg session-manager-plugin.pkg -target / && sudo ln -s /usr/local/sessionmanagerplugin/bin/session-manager-plugin /usr/local/bin/session-manager-plugin' \
     atpull'%atclone' \
-        aws/session-manager-plugin
+        https://github.com/aws/aws-cli/blob/v2/bin/aws_zsh_completer.sh
 
 ## auto compiling zshrc & run additional setup
 zinit wait'1' as'null' lucid nocd for \
