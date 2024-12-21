@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1734773720908,
+  "lastUpdate": 1734773743887,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -7589,6 +7589,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macos-14",
             "value": "54.776839018947385",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "d38feeb4ce7de0786eda041fe3edb5b95b4561d1",
+          "message": "fix: fix aws cli install for mac",
+          "timestamp": "2024-12-21T18:31:43+09:00",
+          "tree_id": "bff3aec600c5cad16965946ebbb5efb02c6c52d6",
+          "url": "https://github.com/rajyan/dotfiles/commit/d38feeb4ce7de0786eda041fe3edb5b95b4561d1"
+        },
+        "date": 1734773743365,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time ubuntu-24.04",
+            "value": "58.645408957959184",
             "unit": "millisecond"
           }
         ]
