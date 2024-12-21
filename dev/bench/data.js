@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1734776880430,
+  "lastUpdate": 1734778172571,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -7734,6 +7734,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-22.04",
             "value": "59.09268234000002",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "fb246d01f8c06154f86eef3cb22df8822dfcdd74",
+          "message": "Revert \"fix: fix session-manager install for linux\"\n\nThis reverts commit 70204babda99710dd3361ec7a31c9b4eb2bdbf8b.",
+          "timestamp": "2024-12-21T19:42:06+09:00",
+          "tree_id": "bff3aec600c5cad16965946ebbb5efb02c6c52d6",
+          "url": "https://github.com/rajyan/dotfiles/commit/fb246d01f8c06154f86eef3cb22df8822dfcdd74"
+        },
+        "date": 1734778170740,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macos-14",
+            "value": "53.10939336",
             "unit": "millisecond"
           }
         ]
