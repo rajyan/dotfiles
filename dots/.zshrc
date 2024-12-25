@@ -138,12 +138,9 @@ zinit wait'1' as'null' lucid for \
     atclone'[[ "$(uname)" == "Linux" ]] && curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb" && sudo dpkg -i session-manager-plugin.deb' \
     atclone'[[ "$(uname)" == "Darwin" ]] && curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg" && sudo installer -pkg AWSCLIV2.pkg -target /' \
     atclone'[[ "$(uname)" == "Darwin" ]] && curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/mac_arm64/session-manager-plugin.pkg" -o "session-manager-plugin.pkg" && sudo installer -pkg session-manager-plugin.pkg -target / && sudo ln -s /usr/local/sessionmanagerplugin/bin/session-manager-plugin /usr/local/bin/session-manager-plugin' \
-    atpull'%atclone' \
-        https://github.com/aws/aws-cli/blob/v2/bin/aws_zsh_completer.sh
-
-## auto compiling zshrc & run additional setup
-zinit wait'1' as'null' lucid nocd for \
+    atclone'command -v aws && command -v session-manager-plugin' \
     atload'([[ ! -e ~/.zshrc.zwc ]] || [[ ~/.zshrc -nt ~/.zshrc.zwc ]]) && zcompile ~/.zshrc' \
+    atinit'complete -C aws_completer aws' atpull'%atclone' \
         rajyan/null
 
 # keybindings
