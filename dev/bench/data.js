@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1735107862849,
+  "lastUpdate": 1735107866271,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -7995,6 +7995,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macos-14",
             "value": "53.606319555319146",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "committer": {
+            "email": "38206553+rajyan@users.noreply.github.com",
+            "name": "Yohta Kimura",
+            "username": "rajyan"
+          },
+          "distinct": true,
+          "id": "22f1917e6eebc2dbc3f907ec488f0209c530dadb",
+          "message": "feat: move aws cli to rajyan/null",
+          "timestamp": "2024-12-25T15:21:49+09:00",
+          "tree_id": "5c8af60e8bc07f71a467aa783ed422b887c2bc65",
+          "url": "https://github.com/rajyan/dotfiles/commit/22f1917e6eebc2dbc3f907ec488f0209c530dadb"
+        },
+        "date": 1735107864777,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macos-15",
+            "value": "53.585818877358484",
             "unit": "millisecond"
           }
         ]
