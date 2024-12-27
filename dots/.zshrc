@@ -93,11 +93,10 @@ zinit lucid for \
 zinit wait'1' if'[[ "$(uname)" == "Darwin" ]]' from'gh-r' as'null' lucid \
     mv'WezTerm-*/WezTerm.app -> /Applications/WezTerm.app' sbin'/Applications/WezTerm.app/Contents/MacOS/wezterm*' for \
         wez/wezterm
-zinit wait'1' if'[[ "$(uname)" == "Linux" ]]' from'gh-r' as'null' lucid \
-    bpick'*.AppImage' mv'*.appimage -> wezterm' sbin'wezterm' for \
-    atclone'./wezterm --appimage-extract' \
-    atclone'command cp ./squashfs-root/*.png ~/.icons/' \
-    atclone'sed "s|=wezterm|=$ZPFX/bin/wezterm|g" ./squashfs-root/*.desktop > ~/.local/share/applications/wezterm.desktop' \
+zinit wait'1' if'[[ "$(uname)" == "Linux" ]]' from'gh-r' lucid \
+    bpick'*Ubuntu22*.tar.xz' sbin'./**/bin/wezterm' for \
+    atclone'command cp ./**/icons/**/*.png ~/.local/share/icons/' \
+    atclone'sed "s|=wezterm|=$ZPFX/bin/wezterm|g" ./**/*.desktop > ~/.local/share/applications/wezterm.desktop' \
     atpull'%atclone' \
         wez/wezterm
 
@@ -134,7 +133,7 @@ zinit wait'1' as'null' sbin'bin/n' lucid for \
 
 ## aws cli and session-manager
 zinit wait'1' as'null' lucid for \
-    atclone'[[ "$(uname)" == "Linux" ]] && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install -b $ZPFX/bin -i $ZPFX/aws-cli --update' \
+    atclone'[[ "$(uname)" == "Linux" ]] && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip -q awscliv2.zip && ./aws/install -b $ZPFX/bin -i $ZPFX/aws-cli --update' \
     atclone'[[ "$(uname)" == "Linux" ]] && curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb" && sudo dpkg -i session-manager-plugin.deb' \
     atclone'[[ "$(uname)" == "Darwin" ]] && curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg" && sudo installer -pkg AWSCLIV2.pkg -target /' \
     atclone'[[ "$(uname)" == "Darwin" ]] && curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/mac_arm64/session-manager-plugin.pkg" -o "session-manager-plugin.pkg" && sudo installer -pkg session-manager-plugin.pkg -target / && sudo ln -s /usr/local/sessionmanagerplugin/bin/session-manager-plugin /usr/local/bin/session-manager-plugin' \
