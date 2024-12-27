@@ -1,7 +1,0 @@
-alias ojl='oj l -u rajyan -p $AC_PASS https://atcoder.jp'
-alias ojd='rm -rf test && oj d $(pbp | sed "s/\r//")'
-alias ojt='oj t -e 1e-5 --print-memory -c cmake-build-debug/"${PWD##*/}"_"${$(ls -t | grep .cpp$ | head -1)%.cpp}"'
-alias ojtr='oj t -e 1e-5 --print-memory -c cmake-build-release/"${PWD##*/}"_"${$(ls -t | grep .cpp$ | head -1)%.cpp}"'
-alias ojs='oj s $(ls -t | grep .cpp$ | head -1)'
-alias ojdt='ojd && ojt'
-alias ojts='ojt && ojs'
