@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1738453112463,
+  "lastUpdate": 1738453118898,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -8611,6 +8611,33 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time ubuntu-24.04",
             "value": "56.09466918901962",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Yohta Kimura",
+            "username": "rajyan",
+            "email": "38206553+rajyan@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "GitHub",
+            "username": "web-flow",
+            "email": "noreply@github.com"
+          },
+          "id": "d3b0fedacbdf43317a13f7ab306b019d8c78b198",
+          "message": "Delete dots/.aliases",
+          "timestamp": "2024-12-27T07:44:55Z",
+          "url": "https://github.com/rajyan/dotfiles/commit/d3b0fedacbdf43317a13f7ab306b019d8c78b198"
+        },
+        "date": 1738453116967,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macos-15",
+            "value": "53.08552456641509",
             "unit": "millisecond"
           }
         ]
