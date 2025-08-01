@@ -92,13 +92,13 @@ zinit lucid for \
 ## wezterm
 zinit wait'1' if'[[ "$(uname)" == "Darwin" ]]' from'gh-r' as'null' lucid \
     mv'WezTerm-*/WezTerm.app -> /Applications/WezTerm.app' sbin'/Applications/WezTerm.app/Contents/MacOS/wezterm*' for \
-        wez/wezterm
+        wezterm/wezterm
 zinit wait'1' if'[[ "$(uname)" == "Linux" ]]' from'gh-r' lucid \
     bpick'*Ubuntu22*.tar.xz' sbin'./**/bin/wezterm' for \
     atclone'command cp ./**/icons/**/*.png ~/.local/share/icons/' \
     atclone'sed "s|=wezterm|=$ZPFX/bin/wezterm|g" ./**/*.desktop > ~/.local/share/applications/wezterm.desktop' \
     atpull'%atclone' \
-        wez/wezterm
+        wezterm/wezterm
 
 ## git credential manager
 zinit wait'1' from'gh-r' as'null' sbin'git-credential-manager' lucid for \
