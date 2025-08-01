@@ -1,4 +1,3 @@
-tap "homebrew/bundle"
 tap "linuxbrew/xorg"
 brew "ansible"
 brew "gh"
