@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1769989419893,
+  "lastUpdate": 1769989425713,
   "repoUrl": "https://github.com/rajyan/dotfiles",
   "entries": {
     "Benchmark": [
@@ -9915,6 +9915,33 @@ window.BENCHMARK_DATA = {
           {
             "name": "zsh load time macos-15",
             "value": "102.20032060000003",
+            "unit": "millisecond"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Yohta Kimura",
+            "username": "rajyan",
+            "email": "38206553+rajyan@users.noreply.github.com"
+          },
+          "committer": {
+            "name": "Yohta Kimura",
+            "username": "rajyan",
+            "email": "38206553+rajyan@users.noreply.github.com"
+          },
+          "id": "062e8c0b6a3f9b94edc45caa778e455a37c59838",
+          "message": "fix: update wezterm source paths in .zshrc",
+          "timestamp": "2025-08-01T09:48:22Z",
+          "url": "https://github.com/rajyan/dotfiles/commit/062e8c0b6a3f9b94edc45caa778e455a37c59838"
+        },
+        "date": 1769989424716,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "zsh load time macos-14",
+            "value": "67.14935014666666",
             "unit": "millisecond"
           }
         ]
